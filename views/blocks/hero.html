@@ -1,0 +1,22 @@
+{%- set slider = ["blocks/slider/item_1.html", "blocks/slider/item_1.html" ,"blocks/slider/item_1.html"] -%}
+{%- set slider2 = ["blocks/slider/item_1.html", "blocks/slider/item_1.html" ,"blocks/slider/item_1.html"] -%}
+<section class="c-hero">
+	<div class="c-hero__back">
+		<div class="c-hero__bg" style="background-image:  url({{ Root}}images/hero-bg.jpg)" ></div>
+	</div>
+	<div class="c-hero__front">
+		<div class="c-container c-container--expanded">
+			<div class="c-hero__stage">
+				<div class="c-hero__slider">
+					{% for item in slider %}
+					<div class="c-hero__sliderItem">
+						{% include item  %}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+
+			{% include "blocks/hero_category.html" %}
+		</div>
+	</div>
+</section>

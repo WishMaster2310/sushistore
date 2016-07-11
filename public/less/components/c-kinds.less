@@ -1,0 +1,55 @@
+.c-kinds {
+	margin-left: -10%;
+	font-size: 0;
+	&Wrapper {
+		margin-left: 200px;
+		margin-right: 100px;
+	}
+
+	&__item {
+		font-size: @base-font-size;
+		width: 15%;
+		margin: 0 0 36px 10%;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		color: inherit;
+		text-decoration: none;
+		
+		
+	}
+
+	&__img {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		opacity: .5;
+		margin-bottom: 10px;
+		transition: all .3s ease-in;
+
+		&:before {
+			content: "";
+			padding-top: 100%;
+			display: block;
+		}
+	}
+
+	&__caption {
+		font-weight: bold;
+		color: #fff;
+		text-transform: uppercase;
+		transition: color .2s ease-in;
+		
+	}
+
+	&__item:hover &__img {
+		border-color: @red;
+		opacity: 1;
+	}
+	
+	&__item:hover &__caption {
+		color: @red;
+	}
+}
