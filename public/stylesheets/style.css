@@ -129,6 +129,7 @@ table {
 html,
 body {
   font-size: 14px;
+  min-width: 1280px;
 }
 body {
   font-family: 'Roboto', Tahoma, Verdana, Arial, sans-serif;
@@ -554,4 +555,61 @@ body {
 }
 .c-kinds__item:hover .c-kinds__caption {
   color: #e31c2e;
+}
+.c-advantages {
+  color: #fff;
+}
+.c-advantagesWrapper {
+  background-color: #282828;
+  padding: 40px 0;
+}
+.c-advantages__text {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.c-advantages__title {
+  font-size: 2.286em;
+  text-align: center;
+  color: #ffdc17;
+  margin-bottom: 5px;
+}
+.c-advantages__row {
+  clear: both;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.c-advantages__row:before,
+.c-advantages__row:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.c-advantages__col {
+  width: 50%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.c-advantages__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.857em;
+  line-height: 1.333em;
+  font-weight: 300;
+}
+.c-advantages__list > li {
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+.c-advantages__list > li:before {
+  content: "•";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffdc17;
+  font-size: 1.667em;
 }
