@@ -1,0 +1,140 @@
+{
+
+	"Nav": [
+		{
+			"type": "link",
+			"caption": "Наши Акции",
+			"url": "#"
+		},
+		{
+			"type": "menu",
+			"caption": "Наше Меню",
+			"url": "#"
+		},
+		{
+			"type": "link",
+			"caption": "Ваши Отзывы",
+			"url": "#"
+		},
+		{
+			"type": "link",
+			"caption": "Личный Кабинет",
+			"url": "#"
+		},
+		{
+			"type": "link",
+			"caption": "Наша Доставка",
+			"url": "#"
+		},
+		{
+			"type": "link",
+			"caption": "Наши Адреса",
+			"url": "#"
+		},
+		{
+			"type": "link",
+			"caption": "Наши Адреса",
+			"url": "#"
+		},
+		{
+			"type": "link",
+			"caption": "Контроль Качества",
+			"url": "#"
+		},
+		{
+			"type": "link",
+			"caption": "Наша Команда",
+			"url": "#"
+		},
+		{
+			"type": "link",
+			"caption": "Связаться с Нами",
+			"url": "#"
+		}
+	],
+	"Menu": [
+		{
+			"type": "link",
+			"url": "#",
+			"caption": "Новинки"
+		},
+		{
+			"type": "link",
+			"url": "#",
+			"caption": "Сеты"
+		},
+		{
+			"type": "list",
+			"url": null,
+			"caption": "Роллы",
+			"items": [
+				{
+					"url": "#",
+					"caption": "Классические"
+				},
+				{
+					"url": "#",
+					"caption": "Теплые"
+				},
+				{
+					"url": "#",
+					"caption": "Хосо-Маки"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"url": null,
+			"caption": "Суши",
+			"items": [
+				{
+					"url": "#",
+					"caption": "Гунканы"
+				},
+				{
+					"url": "#",
+					"caption": "Нигири"
+				}
+			]
+		},
+		{
+			"type": "list",
+			"url": null,
+			"caption": "Wok",
+			"items": [
+				{
+					"url": "#",
+					"caption": "Лапша"
+				},
+				{
+					"url": "#",
+					"caption": "Рис"
+				},
+				{
+					"url": "#",
+					"caption": "Дополнения"
+				}
+			]
+		},
+		{
+			"type": "link",
+			"url": "#",
+			"caption": "Салаты/Супы"
+		},
+		{
+			"type": "link",
+			"url": "#",
+			"caption": "Десерт"
+		},
+		{
+			"type": "link",
+			"url": "#",
+			"caption": "Напитки"
+		},
+		{
+			"type": "link",
+			"url": "#",
+			"caption": "Дополнения"
+		}
+	]
+}

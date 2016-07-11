@@ -1,0 +1,44 @@
+{%- set Root = '/'%}{% if isExport %} {% set Root = ''%}{% endif -%}
+<!doctype html>
+<!--[if IE 7]>
+<html class="ie7 lt-ie10 lt-ie9 lt-ie8" lang="ru"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8 lt-ie10 lt-ie9" lang="ru"><![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9 lt-ie10" lang="ru"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <title>SushiStore - Суши с доставкой на дом</title>
+
+  <meta content="доставка еды на дом" name="description">
+  <meta content="суши роллы заказать Москва" name="keywords">
+
+  <link rel="shortcut icon" href="{{ Root }}favicon.ico" type="image/x-icon">
+  <link rel="icon" href="{{ Root }}favicon.ico" type="image/x-icon">
+
+  <meta content="telephone=no" name="format-detection">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="true">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+  <link href="{{ Root }}stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,500&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+</head>
+<body>
+  {% include "blocks/header.html" %}
+  {% include "blocks/nav.html" %}
+  {% block content %}{% endblock content %}
+  {% include "blocks/footer.html" %}
+  
+  {%- if isExport %}
+    <script src="{{ Root }}javascripts/app.min.js"></script>
+    {%- else %}
+    <script src="//localhost:35729/livereload.js"></script>
+    <script src="{{ Root }}javascripts/app.js"></script>
+  {%- endif %}
+</body>
