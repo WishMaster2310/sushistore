@@ -1,0 +1,55 @@
+<!-- App  -->
+<section class="c-appWrapper">
+	<div class="c-container c-container--expanded">
+		<div class="c-app">
+			<div class="c-app__row">
+				<div class="c-app__col"></div>
+				<div class="c-app__col">
+					<h2 class="c-app__title">Наше приложение</h2>
+					<p class="c-app__text">Оставьте свой номер телефона или электронную почту<br> и мы вышлем ссылку на приложение.</p>
+					
+					<div class="c-app__data">
+						<form class="c-appForm" action="/" method="POST">
+							<label class="c-appForm__label">Телефон</label>
+							<div class="c-appForm__line">
+								<div class="c-appForm__col">
+									<input class="c-appForm__input c-appForm__input--tel" name="getAppTel" type="tel" placeholder="+7 (___) ___ __ __" required>
+								</div>
+								<div class="c-appForm__col c-appForm__col--right">
+									<button type="submit" class="c-appForm__btn">Отправить по Смс</button>
+								</div>
+							</div>
+						</form>
+
+						<form class="c-appForm" action="/" method="POST">
+							<label class="c-appForm__label">Эл. почта</label>
+							<div class="c-appForm__line">
+								<div class="c-appForm__col">
+									<input class="c-appForm__input" name="getAppTel" type="email" placeholder="email" required>
+								</div>
+								<div class="c-appForm__col c-appForm__col--right">
+									<button type="submit" class="c-appForm__btn">Отправить по почте</button>
+								</div>
+								
+							</div>
+							<div>
+								<label class="c-appForm__checkbox">
+									<input type="checkbox" name="subscribe">
+									<span class="c-appForm__checkDiv"></span>			
+									Уведомлять о скидках и акция (без спама)
+								</label>
+							</div>
+						</form>
+
+						<div class="c-app__line">
+							<img src="{{ Root ~ 'images/set-gplay.png' }}" alt="Google Play Market">
+							<img src="{{ Root ~ 'images/set-appStore.png' }}" alt="Apple App Store">
+							<img src="{{ Root ~ 'images/set-win.png' }}" alt="Windows Apps">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- / App  -->
