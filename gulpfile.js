@@ -39,7 +39,7 @@ gulp.task('less:prod', function() {
       advanced: true
     }),
     autoprefix = new LessPluginAutoPrefix({
-      browsers: ["last 30 versions", "IE 8", "IE 9"]
+      browsers: ["last 10 versions", "IE 8", "IE 9", , "IE 10"]
     });
 
   return gulp.src('public/less/style.less')

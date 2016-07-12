@@ -1,3 +1,108 @@
-<!-- FOOTER -->
+{%- macro footLink(list, idx) %}
+	{% set link = "" %}
+	{% for item in ctx[list] %}
+		{% if loop.index == idx %}
+			{% set link = item %}
+		{% endif %}
+	{% endfor %}
 
+	{% if link.type != 'list' %}
+		<a href="{{ link.url }}" class="c-footer__link c-fmenu__title">{{ link.caption }}</a>
+		{% else %}
+		<div class="c-fmenu__title">{{ link.caption }}</div>
+		<ul class="c-fmenu__list">
+		{% for one in link.items %}
+			<li class="c-fmenu__list-item">
+				<a href="{{ one.url }}" class="c-footer__link">{{ one.caption }}</a>
+			</li>
+		{% endfor %}
+		</ul>
+	{% endif %}
+{% endmacro -%}
+<!-- FOOTER -->
+<footer class="c-footer">
+	<div class="c-container c-container--expanded">
+		<div class="c-fmenu">
+			<div class="c-fmenu__col">
+				{{ footLink('Nav', 1) }}
+				{{ footLink('Nav', 2) }}
+				{{ footLink('Nav', 3) }}
+			</div>
+			<div class="c-fmenu__col">
+				{{ footLink('Nav', 4) }}
+				{{ footLink('Nav', 5) }}
+				{{ footLink('Nav', 6) }}
+			</div>
+			<div class="c-fmenu__col">
+				{{ footLink('Nav', 7) }}
+				{{ footLink('Nav', 8) }}
+				{{ footLink('Nav', 9) }}
+			</div>
+			<div class="c-fmenu__col">
+				{{ footLink('Menu', 1) }}
+				{{ footLink('Menu', 2) }}
+			</div>
+			<div class="c-fmenu__col">
+				{{ footLink('Menu', 3) }}
+			</div>
+			<div class="c-fmenu__col">
+				{{ footLink('Menu', 4) }}
+			</div>
+			<div class="c-fmenu__col">
+				{{ footLink('Menu', 5) }}
+			</div>
+			<div class="c-fmenu__col">
+				{{ footLink('Menu', 6) }}
+				{{ footLink('Menu', 7) }}
+			</div>
+			<div class="c-fmenu__col">
+				{{ footLink('Menu', 8) }}
+				{{ footLink('Menu', 9) }}
+			</div>
+		</div>
+
+		<div class="c-fline">
+			<div class="c-fline__block">
+				<div class="c-fline__copy"> <img src="{{ Root ~ 'images/footer-logo.png' }}" alt="">2016 © СушиStore. Все права защищены</div>
+			</div>
+			<div class="c-fline__block">
+				<a href="#" class="c-fline__pseudo">Адреса магазинов</a>
+			</div>
+			<div class="c-fline__block">
+				<div class="c-fline__pay">
+					<img src="{{ Root ~ 'images/footer-money.png' }}" alt="">
+					<img src="{{ Root ~ 'images/footer-visa.png' }}" alt="">
+					<img src="{{ Root ~ 'images/footer-mastercard.png' }}" alt="">
+				</div>
+			</div>
+
+			<div class="c-fline__block">
+				<div class="c-fline__share">
+					<a href="#"><img src="{{ Root ~ 'images/vk.png' }}" alt=""></a>
+					<a href="#"><img src="{{ Root ~ 'images/fb.png' }}" alt=""></a>
+					<a href="#"><img src="{{ Root ~ 'images/twitter.png' }}" alt=""></a>
+					<a href="#"><img src="{{ Root ~ 'images/odnoclassniki.png' }}" alt=""></a>
+				</div>
+			</div>
+
+
+			<div class="c-fline__block">
+				<a href="#" class="c-fline__pseudo">Заказать звонок</a>
+			</div>
+
+			<div class="c-fline__block">
+				<a href="tel:+74952300000" class="c-fline__tel">+7 (495) 230-00-00</a>
+			</div>
+		</div>
+	</div>
+
+</footer>
+<div class="c-fmeta">
+	<div class="c-container c-container--expanded">
+		<div class="c-fmeta__description"><p>Обращаем Ваше внимание на то, что информация, размещенная на сайте, носит исключительно информационно-рекламный характер, и не является офертой или публичной офертой. <br>Указанные на сайте цены не являются окончательной ценой и могут быть в любое время изменены.</p></div>
+		<div class="c-fmeta__dev">
+			Разработка сайта - <a href="http://hcube.ru/" target="_blank">HCube</a>
+		</div>
+	</div>
+</div>
 <!-- /FOOTER -->

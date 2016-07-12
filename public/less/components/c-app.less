@@ -19,7 +19,6 @@
 		padding-left: 10px;
 		padding-right: 10px;
 		min-height: 1px;
-
 	}
 
 	&__title {
@@ -104,11 +103,17 @@
 		&__checkbox {
 			position: relative;
 			overflow: hidden;
+			font-size: 13px;
+			cursor: pointer;
+			
 			input {
 				left: -999em;
 				position: absolute;
-
 			}
+		}
+
+		&__checkbox input:checked + &__checkDiv:after {
+			display: block;
 		}
 
 		&__checkDiv {
@@ -123,7 +128,6 @@
 			background-color: #fff;
 			position: relative;
 
-
 			&:after {
 				display: none;
 				content: "";
@@ -135,10 +139,8 @@
 				background-image: data-uri('../images/app_check.png');
 				margin-left: round(image-width('../images/app_check.png')/2)*(-1);
 				margin-top: round(image-height('../images/app_check.png')/2)*(-1);
-				
 			}
 		}
-
 	}
 
 	&__data {
@@ -153,7 +155,4 @@
 			margin-right: 10px;
 		}
 	}
-
-
-
 }
