@@ -1,0 +1,41 @@
+.c-fmenu {
+	display: table;
+	width: 100%;
+	margin-bottom: 2em;
+	font-size: 12px;
+
+	&__col {
+		display: table-cell;
+		vertical-align: top;
+		padding-left: 10px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
+	&__title {
+		display: block;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 1em;
+		margin-bottom: 1em;
+	}
+
+	&__list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		&-item {
+			margin-bottom: round(6/12em, 3);
+			&:before {
+				content: "-";
+				display: inline-block;
+				margin-right: 4px;
+				font-size: 16px;
+			}
+		}
+
+	}
+}

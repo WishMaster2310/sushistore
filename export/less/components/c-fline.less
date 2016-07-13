@@ -1,0 +1,59 @@
+.c-fline {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+
+	&__block{
+		align-self: center;
+	}
+
+	&__copy {
+		vertical-align: middle;
+		
+		img {
+			max-width: 100%;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+	}
+
+	&__pseudo {
+		text-decoration: none;
+		border-bottom: 1px dotted #fff;
+		color: #fff;
+
+		&:hover{
+			border-bottom-color: transparent;
+		}
+	}
+
+	&__tel {
+		color: #fff;
+		text-decoration: none;
+		font-size: round(18/14em, 3);
+		transition: color .3s ease-in;
+		&:hover{
+			color: @red;
+		}
+	}
+
+	&__pay {
+		img{
+			max-width: 100%;
+			margin-right: 2px;
+		}
+	}
+
+	&__share {
+		img{
+			max-width: 100%;
+		}
+		a {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 2px;
+		}
+	}
+}
