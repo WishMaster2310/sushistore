@@ -1,23 +1,23 @@
 {%- macro footLink(list, idx) %}
-	{% set link = "" %}
-	{% for item in ctx[list] %}
+	{%- set link = "" -%}
+	{%- for item in ctx[list] %}
 		{% if loop.index == idx %}
 			{% set link = item %}
 		{% endif %}
-	{% endfor %}
+	{%- endfor -%}
 
-	{% if link.type != 'list' %}
+	{%- if link.type != 'list' %}
 		<a href="{{ link.url }}" class="c-footer__link c-fmenu__title">{{ link.caption }}</a>
-		{% else %}
+		{%- else -%}
 		<div class="c-fmenu__title">{{ link.caption }}</div>
 		<ul class="c-fmenu__list">
-		{% for one in link.items %}
+		{%- for one in link.items %}
 			<li class="c-fmenu__list-item">
 				<a href="{{ one.url }}" class="c-footer__link">{{ one.caption }}</a>
 			</li>
-		{% endfor %}
+		{% endfor -%}
 		</ul>
-	{% endif %}
+	{% endif -%}
 {% endmacro -%}
 <!-- FOOTER -->
 <footer class="c-footer">
