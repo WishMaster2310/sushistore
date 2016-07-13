@@ -1,37 +1,38 @@
-<aside class="c-navWrapper c-container c-container--expanded">
-	<div class="c-navBox">
-		<a title="SushiStore - Суши с доставкой на дом" class="c-navBox__brand" href="/">
-			<img class="c-navBox__logo" src="{{Root}}images/logo.png" alt="SushiStore - Суши с доставкой на дом">
-		</a>
-		<nav class="c-nav c-navBox__menu" role="navigation">
-		{%- for item in ctx.Nav  %}
-			{%- if item.type == 'link'  %}
-				<a class="c-nav__item" href="{{ item.url }}">{{ item.caption }}</a>
-			{% elif item.type == 'menu' %}
-				<div class="c-nav__item c-nav__item--list">{{ item.caption }}
-					<div class="c-subNav">
-						{% for subItem in ctx.Menu %}
-							{%- if subItem.type == 'link'  %}
-								<a class="c-subNav__item" href="{{ subItem.url }}">{{ subItem.caption }}</a>
-							{% elif subItem.type == 'list' %}
-								<div class="c-subNav__item c-subNav__item--list">
-									{% for one in subItem.items %}
-										<a class="c-subNav__item" href="{{ one.url }}">{{ one.caption }}</a>
-									{% endfor %}
-								</div>
-							{%- endif -%}
-						{% endfor %}
-					</div>
+
+<aside class="c-navBox">
+	<a title="SushiStore - Суши с доставкой на дом" class="c-navBox__brand" href="/">
+		<img class="c-navBox__logo" src="{{Root}}images/logo.png" alt="SushiStore - Суши с доставкой на дом">
+	</a>
+	<nav class="c-nav c-navBox__menu" role="navigation">
+	{%- for item in ctx.Nav  %}
+		{%- if item.type == 'link'  %}
+			<a class="c-nav__item" href="{{ item.url }}">{{ item.caption }}</a>
+		{%- elif item.type == 'menu' %}
+			<div class="c-nav__item c-nav__item--list">
+				<span class="c-nav__label">{{ item.caption }}</span>
+				<div class="c-subNav">
+					{%- for subItem in ctx.Menu %}
+						{%- if subItem.type == 'link'  %}
+							<a class="c-subNav__item" href="{{ subItem.url }}">{{ subItem.caption }}</a>
+						{%- elif subItem.type == 'list' %}
+							<span class="c-subNav__caption">{{ subItem.caption }}</span>
+							<div class="c-subNav__item c-subNav__item--list">
+								{%- for one in subItem.items %}
+									<a class="c-subNav__link" href="{{ one.url }}">{{ one.caption }}</a>
+								{% endfor -%}
+							</div>
+						{%- endif -%}
+					{% endfor %}
 				</div>
-			{% else %}
-			  <div class="c-nav__item c-nav__item--list">{{ item.caption }}</div>
-			{% endif -%}
-		{% endfor -%}
-		</nav>
-		<div class="c-navBox__footer" role="search">
-			<form class="c-navBox__search" action="/" method="Post" >
-				<input type="text" name="siteSearch" placeholder="Поиск по сайту" class="c-navBox__input">
-			</form>
-		</div>
+			</div>
+		{%- else %}
+		  <div class="c-nav__item c-nav__item--list">{{ item.caption }}</div>
+		{%- endif -%}
+	{%- endfor -%}
+	</nav>
+	<div class="c-navBox__footer" role="search">
+		<form class="c-navBox__search" action="/" method="Post" >
+			<input type="text" name="siteSearch" placeholder="Поиск по сайту" class="c-navBox__input">
+		</form>
 	</div>
 </aside>

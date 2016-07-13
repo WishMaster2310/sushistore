@@ -1,6 +1,7 @@
-.c-hero {
+.c-main {
 	min-height: 600px;
-	padding-top: 10px;
+
+		padding-bottom: 40px;
 	position: relative;
 
 
@@ -18,25 +19,44 @@
 		z-index: 1;
 	}
 
+
 	&__bg {
 		background-size: cover;
-		background-position: 50% 50%;
+		background-attachment: fixed;
+		background-position: 50% 0;
 		background-repeat: no-repeat;
+		background-color: #737478;
+	}
+
+	&__container {
+		.clearfix();
 	}
 
 	&__stage {
-		margin-left: 250px;
 		margin-top: 50px;
-		margin-right: 115px;
+		float: right;
+		width: 1019px;
+
+	}
+
+	&__sidebar {
+		width: 200px;
+		margin-top: -36px;
+		position: relative;
 	}
 
 	&__slider {
 		margin-bottom: 140px;
     outline: none !important;
     visibility: hidden;
+    height: 330px;
+    margin-left: 70px;
+    margin-right: 70px;
 
     &.slick-initialized {
     	visibility: visible;
+    	height: auto;
+    	
     }
 
 

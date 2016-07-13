@@ -2,13 +2,9 @@
 	margin-bottom: 25px;
 	&Box {
 		background-color: #f2f3f4;
-		position: absolute;
-		z-index: 10;
-		top: -36px;
-		width: 200px;
+		
 		padding-top: 20px;
 		padding-bottom: 20px;
-		left: 0;
 
 		&__brand {
 			display: block;
@@ -61,7 +57,15 @@
 		font-size: 14px;
 		line-height: 1;
 		padding: 12px 28px;
-		transition: background .2s ease;
+		transition: background .3s ease-in;
+
+		&--list {
+			padding: 0;
+		}
+
+		&:hover {
+			color: @red;
+		}
 	}
 
 	&__item:after {
@@ -82,4 +86,21 @@
 	&__item:hover {
 		background-color: #fff;
 	}
+
+	&__label {
+		padding: 12px 28px;
+		display: block;
+		cursor: pointer;
+		transition: color .3s ease-in-out;
+
+		&:hover {
+			color: @red;
+		}
+	}
+
+	a {
+		transition: color .3s ease-in-out;
+	}
+
+
 }

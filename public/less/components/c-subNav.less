@@ -1,4 +1,63 @@
 .c-subNav {
 	display: none;
+
+	&__item {
+		padding: 10px 28px 10px 40px;
+		display: block;
+		color: #2b2b2b;
+		text-decoration: none;
+		position: relative;
+
+		&:last-child:after {
+			display: none;
+			
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			height: 0;
+			left: 15px;
+			right: 15px;
+			bottom: 0;
+			border-top: 1px dotted #cacaca;
+			position: absolute;
+		}
+		
+		&:hover {
+			color: red;
+		}
+
+		&--list {
+			padding-top: 0;
+		}
+		
+	}
+
+	&__caption {
+		padding: 10px 28px 10px 40px;
+		display: block;
+	}
+
+	&__link {
+		display: block;
+		margin-bottom: 8px;
+		color: #2b2b2b;
+		margin-left: 10px;
+		text-decoration: none;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			color: @red;
+		}
+		
+	}
+
+	&__caption {
+		color: #9a9a9a;
+	}
 	
 }

@@ -31,10 +31,23 @@
 </head>
 <body>
   {% include "blocks/header.html" %}
-  {% include "blocks/nav.html" %}
-  <main>
-  {% block content %}{% endblock content %}
+  
+  <main class="c-main">
+    <div class="c-main__back">
+      <div class="c-main__bg" style="background-image:  url({{ Root}}images/hero-bg.jpg)" ></div>
+    </div>
+    <div class="c-main__front">
+      <div class="c-container c-container--expanded c-main__container">
+        <div class="c-main__stage">
+           {% block content %}{% endblock%}
+        </div>
+        <div class="c-main__sidebar">
+           {% include "blocks/nav.html" %}
+        </div>
+      </div>
+    </div>
   </main>
+  {% block subContent %}{% endblock %}
   {% include "blocks/footer.html" %}
   
   {%- if isExport %}
