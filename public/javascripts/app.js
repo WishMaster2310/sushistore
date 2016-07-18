@@ -2,8 +2,9 @@ $(function() {
 
 
 	$('.c-slider').slick({
-		arrows: false,
-		autoplay: true
+		autoplay: true,
+		prevArrow: "<div class='c-slider__arrow c-slider__arrow--prev'>",
+		nextArrow: "<div class='c-slider__arrow c-slider__arrow--next'>"
 	});
 
 	$('.c-appForm__input--tel').mask('+7 (999) 999-99-99');

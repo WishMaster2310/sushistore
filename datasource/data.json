@@ -4,7 +4,7 @@
 		{
 			"type": "link",
 			"caption": "Наши Акции",
-			"url": "#"
+			"url": "/actions"
 		},
 		{
 			"type": "menu",

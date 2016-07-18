@@ -7,4 +7,24 @@
 	&--expanded {
 		max-width: 1280px;
 	}
+
+	@media only screen and (min-width: 961px) and (max-width: 1279px) {
+		width: 960px;
+		&--expanded {
+			width: 960px;
+		}
+	}
+
+	@media only screen and (min-width: 768px) and (max-width: 960px) {
+		width: 960px;
+		&--expanded {
+			width: 760px;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		width: 320px;
+		&--expanded {
+			width: 320px;
+		}
+	}
 }

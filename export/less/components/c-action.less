@@ -1,0 +1,61 @@
+.c-action {
+	background-size: cover;
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	padding: 20px;
+
+	min-height: 200px;
+	margin-bottom: 20px;
+
+	&__content {
+		display: table-cell;
+		vertical-align: middle;
+		
+	}
+
+	&__label {
+		margin-bottom: -3px;
+		span {
+			font-size: round(36/14em, 3);
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #fff;
+			background-color: #b2b2b2;
+			display: inline-block;
+			padding: 5px 10px;
+		}
+	}
+	&__label--bg-red span {
+		background: linear-gradient(to right, #cc2132 0%, #cc2132 63%, #ff3b14 100%);
+	}
+
+	&__label--bg-green span {
+		background: linear-gradient(to right, #67a31f 0%, #67a31f 63%, #c1d423 100%);
+	}
+
+	&__label--bg-gold span {
+		background: linear-gradient(to right, #d65e0d 0%, #d65e0d 63%, #e59229 100%);
+	}
+	
+
+	&__text {
+		font-size: 18px;
+		display: inline;
+		line-height: 27px;
+		background-color: #2b2b2b;
+		padding: 5px;
+		color: #fff;
+		margin-left: 10px;
+	}
+
+	@media only screen and (max-width: 767px) {
+		&__label span {
+			font-size: round(18/14em, 3);
+		}
+
+		&__text {
+			font-size: 14px;
+		}
+	}
+}

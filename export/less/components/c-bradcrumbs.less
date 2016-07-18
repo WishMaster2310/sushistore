@@ -1,0 +1,26 @@
+.c-bradcrumbs {
+	list-style-type: none;
+	margin: 0 0 20px 0;
+	font-size: 12px;
+	padding: 0;
+
+	&__item {
+		color: #b6b9bd;
+		display: inline-block;
+		vertical-align: top;
+		
+
+		&:after {
+			content: "/"
+		}
+
+		&:last-child:after {
+			display: none;
+			
+		}
+
+		a {
+			color: #fff;
+		}
+	}
+}

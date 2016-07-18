@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<ul class="c-bradcrumbs">
+	<li class="c-bradcrumbs__item">
+		<a href="/">Главная</a>
+	</li>
+	<li class="c-bradcrumbs__item">
+		<span>Акции</span>
+	</li>
+</ul>
+<h1 class="c-title">Акции</h1>
+<div class="c-action" style="background-image: url({{Root}}images/actions-bg-1.jpg)">
+	<div class="c-action__content">
+		<div class="c-action__label c-action__label--bg-red"><span>Сделай предзаказ</span></div>
+		<div class="c-action__text">забери без очереди</div>
+	</div>
+</div>
+
+<div class="c-action" style="background-image: url({{Root}}images/actions-bg-2.jpg)">
+	<div class="c-action__content">
+		<div class="c-action__label c-action__label--bg-green"><span>Спецпредложение</span></div>
+		<div class="c-action__text">Ролл Джуство в подарок, при заказе от 1500 рублей</div>
+	</div>
+</div>
+
+<div class="c-action" style="background-image: url({{Root}}images/actions-bg-3.jpg)">
+	<div class="c-action__content">
+		<div class="c-action__label c-action__label--bg-gold"><span>Подарок!</span></div>
+		<div class="c-action__text">3 бокала пива по цене двух!</div>
+	</div>
+</div>
+{% endblock %}

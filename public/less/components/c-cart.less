@@ -3,7 +3,19 @@
 	font-size: 12px;
 
 	&__link {
+		position: relative;
 		color: inherit;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			width: image-width("../images/cart.png");
+			height: image-height("../images/cart.png");
+			margin-right: 10px;
+			vertical-align: top;
+			
+			background: url(../images/cart.png) no-repeat left center;
+		}
 		
 
 		&:hover{

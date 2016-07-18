@@ -65,7 +65,12 @@
 
   <main class="c-main">
     <div class="c-main__back">
-      <div class="c-main__bg" style="background-image:  url(images/hero-bg.jpg)"></div>
+      <div class="c-main__bg" style="background-image:  url(images/hero-bg.jpg)">
+        <video autoplay="" loop="" muted="" poster="/common/img/bg_1.jpg">
+          <source src="uploads/video1.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+            <source src="uploads/video1.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+        </video>
+      </div>
     </div>
     <div class="c-main__front">
       <div class="c-container c-container--expanded c-main__container">
@@ -210,7 +215,7 @@
               <img class="c-navBox__logo" src="images/logo.png" alt="SushiStore - Суши с доставкой на дом">
             </a>
             <nav class="c-nav c-navBox__menu" role="navigation">
-              <a class="c-nav__item" href="#">Наши Акции</a>
+              <a class="c-nav__item" href="/actions">Наши Акции</a>
               <div class="c-nav__item c-nav__item--list">
                 <span class="c-nav__label">Наше Меню</span>
                 <div class="c-subNav">
@@ -362,7 +367,7 @@
     <div class="c-container c-container--expanded">
       <div class="c-fmenu">
         <div class="c-fmenu__col">
-          <a href="#" class="c-footer__link c-fmenu__title">Наши Акции</a>
+          <a href="/actions" class="c-footer__link c-fmenu__title">Наши Акции</a>
           <a href="#" class="c-footer__link c-fmenu__title">Наше Меню</a>
           <a href="#" class="c-footer__link c-fmenu__title">Ваши Отзывы</a>
         </div>

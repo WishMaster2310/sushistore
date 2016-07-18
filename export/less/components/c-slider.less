@@ -1,5 +1,6 @@
 .c-slider {
   margin-bottom: 140px;
+  margin-top: 30px;
   outline: none !important;
   visibility: hidden;
   height: 330px;
@@ -16,6 +17,63 @@
     
     a {
       outline: none !important;
+    }
+  }
+
+  @media only screen and (min-width: 961px) and (max-width: 1279px) {
+    margin-bottom: 50px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 70px;
+    cursor: pointer;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      font-size: 40px;
+      color: #fff;
+      display: block;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #fff;
+      top: 50%;
+      margin-top: -15px;
+      position: absolute;
+      transform: rotatez(45deg);
+    }
+
+    &:hover:before {
+      border-color: @red;
+    }
+
+    &--prev {
+      left: -70px;
+    }
+
+    &--prev:before {
+      left: 10px;
+      border-top: 0;
+      border-right: 0;
+    }
+
+    &--next {
+      right: -70px;
+    }
+
+    &--next:before {
+      right: 10px;
+      border-bottom: 0;
+      border-left: 0;
     }
   }
 }
