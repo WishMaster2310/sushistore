@@ -1,0 +1,129 @@
+.c-product {
+  background-color: #eaebed;
+  background-color: fade(#eaebed, 40%);
+  border: 2px solid fade(#fff, 0%);
+  padding: 70px 18px 18px 18px;
+  height: 424px;
+  position: relative;
+  transition: background .3s ease-in-out, border .3s ease-in-out;
+  user-select: none;
+
+  &:hover {
+  	background-color: #eaebed;
+  	border-color: #fff;
+  }
+  &__img {
+    display: block;
+    text-decoration: none;
+    border: 0;
+    text-align: center;
+    img {
+    	max-width: 100%;
+    }
+  }
+  &__data {
+  	position: absolute;
+  	bottom: 0;
+  	left: 18px;
+  	right: 18px;
+  	bottom: 48px;
+  }
+  &-list {
+    margin-left: -14px;
+    margin-bottom: 36px;
+    &__item {
+      display: inline-block;
+      vertical-align: top;
+      width: 336px;
+      margin: 0 -.25em 14px 14px;
+    }
+  }
+
+  &__labels {
+  	text-align: center;
+  	height: 40px;
+  	position: absolute;
+  	top: -3px;
+  	left: 0;
+  	right: 0;
+  	pointer-events: none;
+  }
+
+  &__name {
+
+  }
+
+  &__link {
+  	display: inline-block;
+  	background-color: #fff;
+  	color: #000;
+  	text-decoration: none;
+  	font-size: 16px;
+  	padding: 5px 16px;
+  	transition: color .3s ease-in-out;
+
+  	&:hover {
+  		color: @red;
+  		text-decoration: underline;
+  	}
+  }
+
+  &__link-wrap:hover + &__data &__name &__link {
+  	color: @red;
+  	text-decoration: underline;
+  	
+  }
+
+  &__label {
+  	display: inline-block;
+  	width: 46px;
+  	height: 40px;
+  	margin-left: -20px;
+  	background-repeat: no-repeat;
+  	
+
+  	&:nth-child(odd) {
+  		background-image: data-uri('../images/product-labels.png');
+  	}
+
+  	&:nth-child(even) {
+  		background-image: data-uri('../images/product-labels-odd.png');
+  	}
+
+  	&--plus {
+  		background-position: 0 0;
+  	}
+
+  	&--hot {
+  		background-position: 0 -40px;
+  	}
+
+  	&--sale {
+  		background-position: 0 -80px;
+  	}
+
+  	&--hit {
+  		background-position: 0 -120px;
+  	}
+  }
+
+  &__text {
+  	background-color: #e9e9e9;
+  	font-size: round(11/14em, 3);
+  	line-height: round(14/11, 3);
+  	background-color: #e9e9e9;
+  	padding: 10px 16px;
+  	margin-top: -2px;
+  }
+
+  &__link-wrap {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 88px;
+  	display: block;
+  	z-index: 1;
+  	
+  }
+}

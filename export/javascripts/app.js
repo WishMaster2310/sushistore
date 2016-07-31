@@ -11,8 +11,9 @@ $(function() {
 	$('.c-nav__item--list').on('click', function(e) {
 		e.preventDefault();
 		if ((e.target).tagName === 'A') { return }
+		$(this).toggleClass('c-nav__item--active');
+		$($(this).find('.c-subNav')).stop(true, true).slideToggle();
 
-		$($(this).find('.c-subNav')).stop(true, true).slideToggle()
 	})
 
 });

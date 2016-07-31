@@ -1,0 +1,650 @@
+<!doctype html>
+<!--[if IE 7]>
+<html class="ie7 lt-ie10 lt-ie9 lt-ie8" lang="ru"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8 lt-ie10 lt-ie9" lang="ru"><![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9 lt-ie10" lang="ru"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+
+  <meta charset="utf-8">
+  <title>SushiStore - Суши с доставкой на дом</title>
+
+  <meta content="доставка еды на дом" name="description">
+  <meta content="суши роллы заказать Москва" name="keywords">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <meta content="telephone=no" name="format-detection">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="true">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+  <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,500&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="c-header">
+    <div class="c-container c-container--expanded">
+
+      <div class="c-header__stupid-designer">
+        <div class="c-header__row">
+          <div class="c-header__col c-header__col--left">
+            <select name="citySelect" id="headerCityChooser">
+              <option value="0">Москва</option>
+              <option value="1">Санкт-Петербург</option>
+            </select>
+          </div>
+
+          <div class="c-header__col c-header__col--center">
+            Доставка:
+            <div class="c-header__tel-rotator">
+              <a class="c-header__tel c-header__tel--active" href="tel:+74952300000">+7 (495) 230-00-00</a>
+              <a class="c-header__tel" href="tel:+74952300001">+7 (495) 230-00-01</a>
+              <a class="c-header__tel" href="tel:+74952300002">+7 (495) 230-00-02</a>
+            </div>
+            <div class="c-header__tel-handler"><span class="c-icon c-icon--telhandler"></span>
+            </div>
+          </div>
+
+          <div class="c-header__col c-header__col--right">
+            <div class="c-cart">
+              <a class="c-cart__link" href="#">Корзина</a> — <span class="c-cart__amount">310 р.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- /HEADER -->
+
+  <main class="c-main">
+    <div class="c-main__back">
+      <div class="c-main__bg" style="background-image:  url(images/hero-bg.jpg)">
+        <video autoplay="" loop="" muted="" poster="/common/img/bg_1.jpg">
+          <source src="uploads/video1.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+            <source src="uploads/video1.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+        </video>
+      </div>
+    </div>
+    <div class="c-main__front">
+      <div class="c-container c-container--expanded c-main__container">
+        <div class="c-main__stage">
+
+          <ul class="c-bradcrumbs">
+            <li class="c-bradcrumbs__item">
+              <a href="/">Главная</a>
+            </li>
+            <li class="c-bradcrumbs__item">
+              <a href="/">Наше меню</a>
+            </li>
+            <li class="c-bradcrumbs__item">
+              <a href="/">Роллы</a>
+            </li>
+            <li class="c-bradcrumbs__item">
+              <span>Теплые</span>
+            </li>
+          </ul>
+          <h1 class="c-title">Теплые роллы</h1>
+          <div class="c-wysiwyg c-wysiwyg--white">
+            <p>Сушиstore - это сеть из более, чем 35-и суши-баров, службы доставки суши, роллов, сетов,
+              <br>wok (лапши и риса). Что отличает Сушиstore от остальных?</p>
+          </div>
+          <div class="c-product-list">
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                  <div class="c-product__label c-product__label--plus"></div>
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product1.png" alt="Калифорния мориавасэ">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Калифорния мориавасэ&nbsp;(48&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">25 г.</span>&nbsp;1&thinsp;165 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                  <div class="c-product__label c-product__label--hit"></div>
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product2.png" alt="Инари ролл">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Инари ролл&nbsp;(8&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">25 г.</span>&nbsp;2&thinsp;999 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product3.png" alt="Калифорния с копченым лососем">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Калифорния с копченым лососем&nbsp;(8&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">25 г.</span>&nbsp;9&thinsp;999 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                  <div class="c-product__label c-product__label--hot"></div>
+                  <div class="c-product__label c-product__label--sale"></div>
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product4.png" alt="Инари ролл">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Инари ролл&nbsp;(8&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">25 г.</span>&nbsp;9&thinsp;999 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                  <div class="c-product__label c-product__label--plus"></div>
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product5.png" alt="Татаки филадельфия ролл">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Татаки филадельфия ролл&nbsp;(8&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">925 г.</span>&nbsp;1&thinsp;999 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                  <div class="c-product__label c-product__label--sale"></div>
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product6.png" alt="Инари ролл">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Инари ролл&nbsp;(8&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">25 г.</span>&nbsp;1&thinsp;999 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product4.png" alt="Инари ролл">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Инари ролл&nbsp;(8&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">25 г.</span>&nbsp;9&thinsp;999 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                  <div class="c-product__label c-product__label--plus"></div>
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product5.png" alt="Татаки филадельфия ролл">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Татаки филадельфия ролл&nbsp;(8&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">925 г.</span>&nbsp;1&thinsp;999 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                  <div class="c-product__label c-product__label--sale"></div>
+                  <div class="c-product__label c-product__label--plus"></div>
+                  <div class="c-product__label c-product__label--hot"></div>
+                  <div class="c-product__label c-product__label--hit"></div>
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product6.png" alt="Инари ролл">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Инари ролл&nbsp;(8&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">25 г.</span>&nbsp;1&thinsp;999 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="c-title c-title--small">Рекомендуем</div>
+          <div class="c-product-list">
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                  <div class="c-product__label c-product__label--plus"></div>
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product1.png" alt="Калифорния мориавасэ">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Калифорния мориавасэ&nbsp;(48&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">25 г.</span>&nbsp;1&thinsp;165 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                  <div class="c-product__label c-product__label--hit"></div>
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product2.png" alt="Инари ролл">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Инари ролл&nbsp;(8&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">25 г.</span>&nbsp;2&thinsp;999 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-product-list__item">
+              <div class="c-product">
+                <div class="c-product__labels">
+                </div>
+                <div class="c-product__img">
+                  <img src="../uploads/product3.png" alt="Калифорния с копченым лососем">
+                </div>
+                <a href="/" class="c-product__link-wrap"></a>
+                <div class="c-product__data">
+                  <div class="c-product__name">
+                    <div class="c-product__link">Калифорния с копченым лососем&nbsp;(8&nbsp;шт.)</div>
+                  </div>
+                  <div class="c-product__text">
+                    <span>Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут</span>
+                  </div>
+                  <div class="c-buyline c-product__buyline">
+                    <div class="c-buyline__info"><span class="c-buyline__small">25 г.</span>&nbsp;9&thinsp;999 р.</div>
+                    <div class="c-buyline__input-wrap">
+                      <input type="text" class="c-buyline__input" value="1">
+                      <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                      <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+                    </div>
+                    <button class="c-buyline__btn" type="button">В козину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="c-main__sidebar">
+
+          <aside class="c-navBox">
+            <a title="SushiStore - Суши с доставкой на дом" class="c-navBox__brand" href="/">
+              <img class="c-navBox__logo" src="images/logo.png" alt="SushiStore - Суши с доставкой на дом">
+            </a>
+            <nav class="c-nav c-navBox__menu" role="navigation">
+              <a class="c-nav__item" href="/actions">Наши Акции</a>
+              <div class="c-nav__item c-nav__item--list">
+                <span class="c-nav__label">Наше Меню</span>
+                <div class="c-subNav">
+                  <a class="c-subNav__item" href="#">Новинки</a>
+                  <a class="c-subNav__item" href="#">Сеты</a>
+                  <span class="c-subNav__caption">Роллы</span>
+                  <div class="c-subNav__item c-subNav__item--list">
+                    <a class="c-subNav__link" href="#">Классические</a>
+
+                    <a class="c-subNav__link" href="#">Теплые</a>
+
+                    <a class="c-subNav__link" href="#">Хосо-Маки</a>
+                  </div>
+                  <span class="c-subNav__caption">Суши</span>
+                  <div class="c-subNav__item c-subNav__item--list">
+                    <a class="c-subNav__link" href="#">Гунканы</a>
+
+                    <a class="c-subNav__link" href="#">Нигири</a>
+                  </div>
+                  <span class="c-subNav__caption">Wok</span>
+                  <div class="c-subNav__item c-subNav__item--list">
+                    <a class="c-subNav__link" href="#">Лапша</a>
+
+                    <a class="c-subNav__link" href="#">Рис</a>
+
+                    <a class="c-subNav__link" href="#">Дополнения</a>
+                  </div>
+                  <a class="c-subNav__item" href="#">Салаты/Супы</a>
+                  <a class="c-subNav__item" href="#">Десерт</a>
+                  <a class="c-subNav__item" href="#">Напитки</a>
+                  <a class="c-subNav__item" href="#">Дополнения</a>
+                </div>
+              </div>
+              <a class="c-nav__item" href="#">Ваши Отзывы</a>
+              <a class="c-nav__item" href="#">Личный Кабинет</a>
+              <a class="c-nav__item" href="#">Наша Доставка</a>
+              <a class="c-nav__item" href="#">Наши Адреса</a>
+              <a class="c-nav__item" href="#">Контроль Качества</a>
+              <a class="c-nav__item" href="#">Наша Команда</a>
+              <a class="c-nav__item" href="#">Связаться с Нами</a>
+            </nav>
+            <div class="c-navBox__footer" role="search">
+              <form class="c-navBox__search" action="/" method="Post">
+                <input type="text" name="siteSearch" placeholder="Поиск по сайту" class="c-navBox__input">
+              </form>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="c-footer">
+    <div class="c-container c-container--expanded">
+      <div class="c-fmenu">
+        <div class="c-fmenu__col">
+          <a href="/actions" class="c-footer__link c-fmenu__title">Наши Акции</a>
+          <a href="#" class="c-footer__link c-fmenu__title">Наше Меню</a>
+          <a href="#" class="c-footer__link c-fmenu__title">Ваши Отзывы</a>
+        </div>
+        <div class="c-fmenu__col">
+          <a href="#" class="c-footer__link c-fmenu__title">Личный Кабинет</a>
+          <a href="#" class="c-footer__link c-fmenu__title">Наша Доставка</a>
+          <a href="#" class="c-footer__link c-fmenu__title">Наши Адреса</a>
+        </div>
+        <div class="c-fmenu__col">
+          <a href="#" class="c-footer__link c-fmenu__title">Контроль Качества</a>
+          <a href="#" class="c-footer__link c-fmenu__title">Наша Команда</a>
+          <a href="#" class="c-footer__link c-fmenu__title">Связаться с Нами</a>
+        </div>
+        <div class="c-fmenu__col">
+          <a href="#" class="c-footer__link c-fmenu__title">Новинки</a>
+          <a href="#" class="c-footer__link c-fmenu__title">Сеты</a>
+        </div>
+        <div class="c-fmenu__col">
+          <div class="c-fmenu__title">Роллы</div>
+          <ul class="c-fmenu__list">
+            <li class="c-fmenu__list-item">
+              <a href="#" class="c-footer__link">Классические</a>
+            </li>
+            <li class="c-fmenu__list-item">
+              <a href="#" class="c-footer__link">Теплые</a>
+            </li>
+            <li class="c-fmenu__list-item">
+              <a href="#" class="c-footer__link">Хосо-Маки</a>
+            </li>
+          </ul>
+        </div>
+        <div class="c-fmenu__col">
+          <div class="c-fmenu__title">Суши</div>
+          <ul class="c-fmenu__list">
+            <li class="c-fmenu__list-item">
+              <a href="#" class="c-footer__link">Гунканы</a>
+            </li>
+            <li class="c-fmenu__list-item">
+              <a href="#" class="c-footer__link">Нигири</a>
+            </li>
+          </ul>
+        </div>
+        <div class="c-fmenu__col">
+          <div class="c-fmenu__title">Wok</div>
+          <ul class="c-fmenu__list">
+            <li class="c-fmenu__list-item">
+              <a href="#" class="c-footer__link">Лапша</a>
+            </li>
+            <li class="c-fmenu__list-item">
+              <a href="#" class="c-footer__link">Рис</a>
+            </li>
+            <li class="c-fmenu__list-item">
+              <a href="#" class="c-footer__link">Дополнения</a>
+            </li>
+          </ul>
+        </div>
+        <div class="c-fmenu__col">
+          <a href="#" class="c-footer__link c-fmenu__title">Салаты/Супы</a>
+          <a href="#" class="c-footer__link c-fmenu__title">Десерт</a>
+        </div>
+        <div class="c-fmenu__col">
+          <a href="#" class="c-footer__link c-fmenu__title">Напитки</a>
+          <a href="#" class="c-footer__link c-fmenu__title">Дополнения</a>
+        </div>
+      </div>
+
+      <div class="c-fline">
+        <div class="c-fline__block">
+          <div class="c-fline__copy">
+            <img src="images/footer-logo.png" alt="">2016 © СушиStore. Все права защищены</div>
+        </div>
+        <div class="c-fline__block">
+          <a href="#" class="c-fline__pseudo">Адреса магазинов</a>
+        </div>
+        <div class="c-fline__block">
+          <div class="c-fline__pay">
+            <img src="images/footer-money.png" alt="">
+            <img src="images/footer-visa.png" alt="">
+            <img src="images/footer-mastercard.png" alt="">
+          </div>
+        </div>
+
+        <div class="c-fline__block">
+          <div class="c-fline__share">
+            <a href="#">
+              <img src="images/vk.png" alt="">
+            </a>
+            <a href="#">
+              <img src="images/fb.png" alt="">
+            </a>
+            <a href="#">
+              <img src="images/twitter.png" alt="">
+            </a>
+            <a href="#">
+              <img src="images/odnoclassniki.png" alt="">
+            </a>
+          </div>
+        </div>
+
+
+        <div class="c-fline__block">
+          <a href="#" class="c-fline__pseudo">Заказать звонок</a>
+        </div>
+
+        <div class="c-fline__block">
+          <a href="tel:+74952300000" class="c-fline__tel">+7 (495) 230-00-00</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <div class="c-fmeta">
+    <div class="c-container c-container--expanded">
+      <div class="c-fmeta__description">
+        <p>Обращаем Ваше внимание на то, что информация, размещенная на сайте, носит исключительно информационно-рекламный характер, и не является офертой или публичной офертой.
+          <br>Указанные на сайте цены не являются окончательной ценой и могут быть в любое время изменены.</p>
+      </div>
+      <div class="c-fmeta__dev">
+        Разработка сайта - <a href="http://hcube.ru/" target="_blank">HCube</a>
+      </div>
+    </div>
+  </div>
+  <!-- /FOOTER -->
+
+  <script src="javascripts/app.min.js"></script>
+</body>
