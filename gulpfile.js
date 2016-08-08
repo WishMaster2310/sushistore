@@ -144,9 +144,9 @@ gulp.task('exportHTML', function() {
       indent_char: ' ',
       indent_size: 2
     }))
-    .pipe(replace(src, 'src=$1/$3$1'))
-    .pipe(replace(href, 'href=$1/$3$1'))
-    .pipe(replace(url, 'url($1/$3$1'))
+    .pipe(replace(src, 'src=$1$3$1'))
+    .pipe(replace(href, 'href=$1$3$1'))
+    .pipe(replace(url, 'url($1$3$1'))
     .pipe(gulp.dest('export'));
 });
 
