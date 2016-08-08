@@ -9,8 +9,9 @@ $(function() {
 
 	$('.c-appForm__input--tel').mask('+7 (999) 999-99-99');
 	$('.c-nav__item--list').on('click', function(e) {
-		e.preventDefault();
+		
 		if ((e.target).tagName === 'A') { return }
+			e.preventDefault();
 		$(this).toggleClass('c-nav__item--active');
 		$($(this).find('.c-subNav')).stop(true, true).slideToggle();
 

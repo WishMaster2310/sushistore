@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {%- set products = [ { "name": "Калифорния мориавасэ", "amount": 48, "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут", "weight": "25 г.", "cost": "1&thinsp;165 р.", "labels": ["plus"], "img": "product1.png" }, { "name": "Инари ролл", "amount": 8, "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут", "weight": "25 г.", "cost": "2&thinsp;999 р.", "labels": ["hit"], "img": "product2.png" }, { "name": "Калифорния с копченым лососем", "amount": 8, "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут", "weight": "25 г.", "cost": "9&thinsp;999 р.", "labels": null, "img": "product3.png" }, { "name": "Инари ролл", "amount": 8, "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут", "weight": "25 г.", "cost": "9&thinsp;999 р.", "labels": ["hot", "sale"], "img": "product4.png" }, { "name": "Татаки филадельфия ролл", "amount": 8, "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут", "weight": "925 г.", "cost": "1&thinsp;999 р.", "labels": ["plus"], "img": "product5.png" }, { "name": "Инари ролл", "amount": 8, "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут", "weight": "25 г.", "cost": "1&thinsp;999 р.", "labels": ["sale"], "img": "product6.png" }, { "name": "Инари ролл", "amount": 8, "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут", "weight": "25 г.", "cost": "9&thinsp;999 р.", "labels": null, "img": "product4.png" }, { "name": "Татаки филадельфия ролл", "amount": 8, "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут", "weight": "925 г.", "cost": "1&thinsp;999 р.", "labels": ["plus"], "img": "product5.png" }, { "name": "Инари ролл", "amount": 8, "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут", "weight": "25 г.", "cost": "1&thinsp;999 р.", "labels": ["sale", "plus", "hot", "hit"], "img": "product6.png" } ]-%} {% block content %}
+{% extends "layout.html" %} {% block content %}
 <ul class="c-bradcrumbs">
   <li class="c-bradcrumbs__item">
     <a href="/">Главная</a>
@@ -19,7 +19,7 @@
     <br> wok (лапши и риса). Что отличает Сушиstore от остальных?</p>
 </div>
 <div class="c-product-list">
-  {% for product in products %}
+  {% for product in ctx.products %}
   <div class="c-product-list__item">
     <div class="c-product">
       <div class="c-product__labels">
@@ -30,7 +30,7 @@
       <div class="c-product__img">
         <img src="../uploads/{{ product.img }}" alt="{{ product.name }}">
       </div>
-      <a href="/" class="c-product__link-wrap"></a>
+      <a href="/item/{{ product.id }}" class="c-product__link-wrap"></a>
       <div class="c-product__data">
         <div class="c-product__name">
           <div class="c-product__link">{{ product.name }}&nbsp;({{ product.amount }}&nbsp;шт.)</div>
@@ -52,39 +52,9 @@
   </div>
   {% endfor %}
 </div>
-<div class="c-title c-title--small">Рекомендуем</div>
-<div class="c-product-list">
-  {% for product in products %} {% if loop.index < 4 %} 
-  <div class="c-product-list__item">
-    <div class="c-product">
-      <div class="c-product__labels">
-        {%- for label in product.labels %}
-        <div class="c-product__label c-product__label--{{ label }}"></div>
-        {%-endfor %}
-      </div>
-      <div class="c-product__img">
-        <img src="../uploads/{{ product.img }}" alt="{{ product.name }}">
-      </div>
-      <a href="/" class="c-product__link-wrap"></a>
-      <div class="c-product__data">
-        <div class="c-product__name">
-          <div class="c-product__link">{{ product.name }}&nbsp;({{ product.amount }}&nbsp;шт.)</div>
-        </div>
-        <div class="c-product__text">
-          <span>{{ product.text }}</span>
-        </div>
-        <div class="c-buyline c-product__buyline">
-          <div class="c-buyline__info"><span class="c-buyline__small">{{ product.weight }}</span>&nbsp;{{ product.cost|safe }}</div>
-          <div class="c-buyline__input-wrap">
-            <input type="text" class="c-buyline__input" value="1">
-            <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
-            <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
-          </div>
-          <button class="c-buyline__btn" type="button">В козину</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endif %} {% endfor %}
-</div>
+
+{% include "blocks/recomendation.html" %}
+{% endblock %}
+{% block subContent %}
+ {% include "blocks/advantages.html" %}
 {% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %} 
+{%- set idx = active|default(0) -%} 
+{%- set activeProduct = ctx.products[idx] -%}
+{% block content %}
+<ul class="c-bradcrumbs">
+  <li class="c-bradcrumbs__item">
+    <a href="/">Главная</a>
+  </li>
+  <li class="c-bradcrumbs__item">
+    <a href="/list">Наше меню</a>
+  </li>
+  <li class="c-bradcrumbs__item">
+    <a href="/list">Роллы</a>
+  </li>
+  <li class="c-bradcrumbs__item">
+    <a href="/list">Теплые</a>
+  </li>
+  <li class="c-bradcrumbs__item">
+    <span>{{activeProduct.name}}&nbsp;({{activeProduct.amount}}&nbsp;шт.)</span>
+  </li>
+</ul>
+<div class="c-product-card c-product-card--type-{{ activeProduct.cardType }}">
+  <div class="c-product-card__row">
+    <div class="c-product-card__col c-product-card__col--img">
+      <div class="c-product-card__img">
+        <div class="c-product__labels">
+          {%- for label in activeProduct.labels %}
+          <div class="c-product__label c-product__label--{{ label }}"></div>
+          {%-endfor %}
+        </div>
+        <img src="../uploads/{{ activeProduct.img_big }}" alt="{{ activeProduct.name }}">
+      </div>
+    </div>
+    <div class="c-product-card__col">
+      <div class="c-title c-title--small">{{activeProduct.name}}&nbsp;({{activeProduct.amount}}&nbsp;шт.)</div>
+      <div class="c-product-card__text">
+        <p>{{activeProduct.text}}</p>
+      </div>
+      <ul class="c-info">
+        <li class="c-info__item">Ккал: 350</li>
+        <li class="c-info__item">Жиры: 120</li>
+        <li class="c-info__item">Белки: 200</li>
+        <li class="c-info__item">Углеводы: 60</li>
+      </ul>
+      <div class="h-mb20">
+        <span class="c-product-card__weight">{{ activeProduct.weight }}</span>
+        <span class="c-product-card__cost">{{ activeProduct.cost|safe }}</span>
+      </div>
+      <div class="c-buyline c-buyline--short c-product-card__buyline">
+        <div class="c-buyline__input-wrap">
+          <input type="text" class="c-buyline__input" value="1">
+          <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+          <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+        </div>
+        <button class="c-buyline__btn" type="button">В козину</button>
+      </div>
+      <a href="/list" class="c-product-card__back">←&nbsp;<span>Вернуться в&nbsp;меню</span></a>
+    </div>
+  </div>
+</div>
+
+{% include "blocks/recomendation.html" %}
+{% endblock %} 
+{% block subContent %}{% include "blocks/advantages.html" %}{% endblock %}

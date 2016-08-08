@@ -1,80 +1,72 @@
 .c-main {
-	min-height: 600px;
+  min-height: 600px;
+  padding-bottom: 40px;
+  position: relative;
+  &__back,
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-		padding-bottom: 40px;
-	position: relative;
+  &__back {
+  	z-index: -1;
+  }
 
-
-	&__back,
-	&__bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-	&__front {
-		position: relative;
-		z-index: 1;
-		padding-top: 36px;
-	}
-
-
-	&__bg {
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: 50% 0;
-		background-repeat: no-repeat;
-		overflow: hidden;
-		background-color: #737478;
-
-		video {
-			position: absolute;
-			top: 0;
-			left: 0;
-			min-width: 100%;
-    	min-height: 100%;
-		}
-	}
-
-	&__container {
-		.clearfix();
-	}
-
-	&__stage {
-		margin-top: 20px;
-		float: right;
-		width: 1035px;
-
-	}
-
-	&__sidebar {
-		width: 200px;
-		position: relative;
-		margin-top: -36px;
-	}
-
-	@media only screen and (min-width: 961px) and (max-width: 1279px) {
-		&__stage {
-			width: 715px;
-		}
-	}
-
-
-
-	@media only screen and (max-width: 960px) {
-		&__sidebar {
-			width: 200px;
-			position: fixed;
-			top: 0;
-			left: -200px;
-		}
-
-		&__stage {
-			float: none;
-			margin-left: 0;
-			width: 100%;
-		}
-	}
+  &__bg {
+  	position: fixed;
+  }
+  &__front {
+    position: relative;
+    z-index: 1;
+    padding-top: 36px;
+  }
+  &__bg {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-color: #737478;
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+  &__container {
+    .clearfix();
+  }
+  &__stage {
+    margin-top: 20px;
+    float: right;
+    width: 1035px;
+  }
+  &__sidebar {
+    width: 200px;
+    position: relative;
+    margin-top: -36px;
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1279px) {
+    &__stage {
+      width: 715px;
+    }
+  }
+  @media only screen and (max-width: 960px) {
+    &__sidebar {
+      width: 200px;
+      position: fixed;
+      top: 0;
+      left: -200px;
+    }
+    &__stage {
+      float: none;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
 }

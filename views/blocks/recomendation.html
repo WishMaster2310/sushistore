@@ -1,0 +1,35 @@
+<div class="c-title c-title--small">Рекомендуем</div>
+<div class="c-product-list">
+  {%- for product in ctx.products %} {% if loop.index < 4 -%}
+    <div class="c-product-list__item">
+        <div class="c-product">
+          <div class="c-product__labels">
+            {%- for label in product.labels %}
+            <div class="c-product__label c-product__label--{{ label }}"></div>
+            {%-endfor %}
+          </div>
+          <div class="c-product__img">
+            <img src="../uploads/{{ product.img }}" alt="{{ product.name }}">
+          </div>
+          <a href="/item/{{ product.id }}" class="c-product__link-wrap"></a>
+          <div class="c-product__data">
+            <div class="c-product__name">
+              <div class="c-product__link">{{ product.name }}&nbsp;({{ product.amount }}&nbsp;шт.)</div>
+            </div>
+            <div class="c-product__text">
+              <span>{{ product.text }}</span>
+            </div>
+            <div class="c-buyline">
+              <div class="c-buyline__info"><span class="c-buyline__small">{{ product.weight }}</span>&nbsp;{{ product.cost|safe }}</div>
+              <div class="c-buyline__input-wrap">
+                <input type="text" class="c-buyline__input" value="1">
+                <button type="button" class="c-buyline__arr c-buyline__arr--top"></button>
+                <button type="button" class="c-buyline__arr c-buyline__arr--down"></button>
+              </div>
+              <button class="c-buyline__btn" type="button">В козину</button>
+            </div>
+          </div>
+        </div>
+    </div>
+{%- endif %}{% endfor -%}
+</div>
