@@ -1,135 +1,224 @@
 {
 
-	"Nav": [
-		{
-			"type": "link",
-			"caption": "Наши Акции",
-			"url": "/actions"
-		},
-		{
-			"type": "menu",
-			"caption": "Наше Меню",
-			"url": "#"
-		},
-		{
-			"type": "link",
-			"caption": "Ваши Отзывы",
-			"url": "#"
-		},
-		{
-			"type": "link",
-			"caption": "Личный Кабинет",
-			"url": "#"
-		},
-		{
-			"type": "link",
-			"caption": "Наша Доставка",
-			"url": "#"
-		},
-		{
-			"type": "link",
-			"caption": "Наши Адреса",
-			"url": "#"
-		},
-		{
-			"type": "link",
-			"caption": "Контроль Качества",
-			"url": "#"
-		},
-		{
-			"type": "link",
-			"caption": "Наша Команда",
-			"url": "#"
-		},
-		{
-			"type": "link",
-			"caption": "Связаться с Нами",
-			"url": "#"
-		}
-	],
-	"Menu": [
-		{
-			"type": "link",
-			"url": "#",
-			"caption": "Новинки"
-		},
-		{
-			"type": "link",
-			"url": "#",
-			"caption": "Сеты"
-		},
-		{
-			"type": "list",
-			"url": null,
-			"caption": "Роллы",
-			"items": [
-				{
-					"url": "#",
-					"caption": "Классические"
-				},
-				{
-					"url": "#",
-					"caption": "Теплые"
-				},
-				{
-					"url": "#",
-					"caption": "Хосо-Маки"
-				}
-			]
-		},
-		{
-			"type": "list",
-			"url": null,
-			"caption": "Суши",
-			"items": [
-				{
-					"url": "#",
-					"caption": "Гунканы"
-				},
-				{
-					"url": "#",
-					"caption": "Нигири"
-				}
-			]
-		},
-		{
-			"type": "list",
-			"url": null,
-			"caption": "Wok",
-			"items": [
-				{
-					"url": "#",
-					"caption": "Лапша"
-				},
-				{
-					"url": "#",
-					"caption": "Рис"
-				},
-				{
-					"url": "#",
-					"caption": "Дополнения"
-				}
-			]
-		},
-		{
-			"type": "link",
-			"url": "#",
-			"caption": "Салаты/Супы"
-		},
-		{
-			"type": "link",
-			"url": "#",
-			"caption": "Десерт"
-		},
-		{
-			"type": "link",
-			"url": "#",
-			"caption": "Напитки"
-		},
-		{
-			"type": "link",
-			"url": "#",
-			"caption": "Дополнения"
-		}
-	]
+  "Nav": [{
+    "type": "link",
+    "caption": "Наши Акции",
+    "url": "/actions"
+  }, {
+    "type": "menu",
+    "caption": "Наше Меню",
+    "url": "#"
+  }, {
+    "type": "link",
+    "caption": "Ваши Отзывы",
+    "url": "#"
+  }, {
+    "type": "link",
+    "caption": "Личный Кабинет",
+    "url": "#"
+  }, {
+    "type": "link",
+    "caption": "Наша Доставка",
+    "url": "/article"
+  }, {
+    "type": "link",
+    "caption": "Наши Адреса",
+    "url": "/article"
+  }, {
+    "type": "link",
+    "caption": "Контроль Качества",
+    "url": "/article"
+  }, {
+    "type": "link",
+    "caption": "Наша Команда",
+    "url": "/article"
+  }, {
+    "type": "link",
+    "caption": "Связаться с Нами",
+    "url": "/article"
+  }],
+  "Menu": [{
+    "type": "link",
+    "url": "/list",
+    "caption": "Новинки"
+  }, {
+    "type": "link",
+    "url": "/list",
+    "caption": "Сеты"
+  }, {
+    "type": "list",
+    "url": null,
+    "caption": "Роллы",
+    "items": [{
+      "url": "/list",
+      "caption": "Классические"
+    }, {
+      "url": "/list",
+      "caption": "Теплые"
+    }, {
+      "url": "/list",
+      "caption": "Хосо-Маки"
+    }]
+  }, {
+    "type": "list",
+    "url": null,
+    "caption": "Суши",
+    "items": [{
+      "url": "/list",
+      "caption": "Гунканы"
+    }, {
+      "url": "/list",
+      "caption": "Нигири"
+    }]
+  }, {
+    "type": "list",
+    "url": null,
+    "caption": "Wok",
+    "items": [{
+      "url": "/list",
+      "caption": "Лапша"
+    }, {
+      "url": "/list",
+      "caption": "Рис"
+    }, {
+      "url": "/list",
+      "caption": "Дополнения"
+    }]
+  }, {
+    "type": "link",
+    "url": "/list",
+    "caption": "Салаты/Супы"
+  }, {
+    "type": "link",
+    "url": "/list",
+    "caption": "Десерт"
+  }, {
+    "type": "link",
+    "url": "/list",
+    "caption": "Напитки"
+  }, {
+    "type": "link",
+    "url": "/list",
+    "caption": "Дополнения"
+  }],
+
+  "products": [{
+  	"id": 0,
+    "name": "Калифорния мориавасэ",
+    "amount": 48,
+    "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут",
+    "weight": "25 г.",
+    "cost": "1&thinsp;165 р.",
+    "labels": [
+      "plus"
+    ],
+    "img": "product1.png",
+    "img_big": "product1_big.png",
+    "cardType": "wide"
+  }, {
+  	"id": 1,
+    "name": "Инари ролл",
+    "amount": 8,
+    "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут",
+    "weight": "25 г.",
+    "cost": "2&thinsp;999 р.",
+    "labels": [
+      "hit"
+    ],
+    "img": "product2.png",
+    "img_big": "product2_big.png",
+    "cardType": "default"
+  }, {
+  	"id": 2,
+    "name": "Калифорния с копченым лососем",
+    "amount": 8,
+    "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут",
+    "weight": "25 г.",
+    "cost": "9&thinsp;999 р.",
+    "labels": null,
+    "img": "product3.png",
+    "img_big": "product3_big.png",
+    "cardType": "default"
+  }, {
+  	"id": 3,
+    "name": "Инари ролл",
+    "amount": 8,
+    "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут",
+    "weight": "25 г.",
+    "cost": "9&thinsp;999 р.",
+    "labels": [
+      "hot",
+      "sale"
+    ],
+    "img": "product4.png",
+    "img_big": "product4_big.png",
+    "cardType": "default"
+  }, {
+  	"id": 4,
+    "name": "Татаки филадельфия ролл",
+    "amount": 8,
+    "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут",
+    "weight": "925 г.",
+    "cost": "1&thinsp;999 р.",
+    "labels": [
+      "plus"
+    ],
+    "img": "product5.png",
+    "img_big": "product5_big.png",
+    "cardType": "default"
+  }, {
+  	"id": 5,
+    "name": "Инари ролл",
+    "amount": 8,
+    "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут",
+    "weight": "25 г.",
+    "cost": "1&thinsp;999 р.",
+    "labels": [
+      "sale"
+    ],
+    "img": "product6.png",
+    "img_big": "product6_big.png",
+    "cardType": "default"
+  }, {
+  	"id": 6,
+    "name": "Инари ролл",
+    "amount": 8,
+    "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут",
+    "weight": "25 г.",
+    "cost": "9&thinsp;999 р.",
+    "labels": null,
+    "img": "product7.png",
+    "img_big": "product7_big.png",
+    "cardType": "default"
+  }, {
+  	"id": 7,
+    "name": "Татаки филадельфия ролл",
+    "amount": 8,
+    "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут",
+    "weight": "925 г.",
+    "cost": "1&thinsp;999 р.",
+    "labels": [
+      "sale",
+      "plus",
+      "hot",
+      "hit"
+    ],
+    "img": "product8.png",
+    "img_big": "product8_big.png",
+    "cardType": "default"
+  }, {
+  	"id": 8,
+    "name": "Гю хибачи",
+    "amount": 8,
+    "text": "Жаренный тофу, авокадо, помидор, ореховый соус, чука салат, кунжут",
+    "weight": "25 г.",
+    "cost": "1&thinsp;999 р.",
+    "labels": [
+      "sale"
+    ],
+    "img": "product10.png",
+    "img_big": "product10_big.png",
+    "cardType": "wide"
+  }]
+
 }
