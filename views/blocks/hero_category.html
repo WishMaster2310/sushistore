@@ -45,7 +45,7 @@
 	<div class="c-kinds">
 		{%- for item in category %}
 			<a class="c-kinds__item" href="{{ item.url }}">
-				<div class="c-kinds__img" style="background-image: url({{ Root ~ 'images/'  ~ item.img }})"></div>
+				<div class="c-kinds__img" style="background-image: url({{ '/images/'  ~ item.img }})"></div>
 				<div class="c-kinds__caption">{{ item.caption }}</div>
 			</a>
 		{% endfor -%}

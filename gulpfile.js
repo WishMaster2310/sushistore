@@ -95,7 +95,11 @@ gulp.task('default', function() {
 
 
 gulp.task('exportDPE', function() {
-  var images, scripts, styles;
+  var src, href, url;
+  //src = /src=([\'\"])(?!\/\/)(\.*\/?)(.[^\'\"]*)\1/g;
+  src = /src=([\'\"])(?!.*\/\/)(?!\.*\/?__core)(\.*\/?)(.[^\'\"]*)\1/g;
+  href = /href=([\'\"])(?!.*\/\/)(?!\.*\/?__core)(\.*\/?)(.[^\'\"]*)\1/g;
+  url = /url\(([\'\"]?)(?!.*\/\/)(?!\.*\/?__core)(\.*\/?)(.[^\)]*)\1/g;
   
   nunjucksRender.nunjucks.configure(['views/'], {
     watch: false
@@ -114,14 +118,17 @@ gulp.task('exportDPE', function() {
       indent_char: ' ',
       indent_size: 2
     }))
-    .pipe(replace(images, 'src=$1@File("/files/images/$2")'))
-    .pipe(replace(scripts, 'src=$1@File("/files/js/$2")'))
-    .pipe(replace(styles, 'src=$1@File("/files/css/$2")'))
+    .pipe(replace(src, 'src=$1/$3$1'))
+    .pipe(replace(href, 'href=$1/$3$1'))
+    .pipe(replace(url, 'url($1/$3$1'))
     .pipe(gulp.dest('export'));
 });
 
 gulp.task('exportHTML', function() {
-  var images, scripts, styles;
+  var src, href, url;
+  src = /src=([\'\"])(?!.*\/\/)(?!\.*\/?__core)(\.*\/?)(.[^\'\"]*)\1/g;
+  href = /href=([\'\"])(?!.*\/\/)(?!\.*\/?__core)(\.*\/?)(.[^\'\"]*)\1/g;
+  url = /url\(([\'\"]?)(?!.*\/\/)(?!\.*\/?__core)(\.*\/?)(.[^\)]*)\1/g;
   
   nunjucksRender.nunjucks.configure(['views/'], {
     watch: false
@@ -137,6 +144,9 @@ gulp.task('exportHTML', function() {
       indent_char: ' ',
       indent_size: 2
     }))
+    .pipe(replace(src, 'src=$1/$3$1'))
+    .pipe(replace(href, 'href=$1/$3$1'))
+    .pipe(replace(url, 'url($1/$3$1'))
     .pipe(gulp.dest('export'));
 });
 
