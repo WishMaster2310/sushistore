@@ -25,6 +25,10 @@
   <meta name="HandheldFriendly" content="true">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
 
+  <meta name="theme-color" content="#171717" />
+  <meta name="msapplication-navbutton-color" content="#171717">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#171717">
+
   <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,500&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -34,9 +38,15 @@
   <!-- HEADER -->
   <header class="c-header">
     <div class="c-container c-container--expanded">
-
       <div class="c-header__stupid-designer">
         <div class="c-header__row">
+          <div class="c-header__col c-header__col--logo">
+            <a title="SushiStore - Суши с доставкой на дом" href="">
+
+              <img src="images/logo.png" alt="SushiStore - Суши с доставкой на дом">
+
+            </a>
+          </div>
           <div class="c-header__col c-header__col--left">
             <select name="citySelect" id="headerCityChooser">
               <option value="0">Москва</option>
@@ -58,6 +68,9 @@
           <div class="c-header__col c-header__col--right">
             <div class="c-cart">
               <a class="c-cart__link" href="#">Корзина</a> — <span class="c-cart__amount">310 р.</span>
+            </div>
+            <div class="c-header__burger">
+              <span></span>
             </div>
           </div>
         </div>

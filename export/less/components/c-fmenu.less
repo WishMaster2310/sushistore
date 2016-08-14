@@ -55,12 +55,26 @@
 		}
 	}
 
-	@media only screen and (max-width: 767px) {
+	@media only screen and (max-width: 768px) {
 
-		
+		margin-left: 0;
 		&__col {
-			width: 98%;
-			
+			width: 100%;
+			margin-bottom: 0;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&__title {
+			padding-top: 10px;
+			color: fade(#fff, 50%);
+			&.c-footer__link {
+				color: #fff;
+				margin-bottom: 0;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid fade(#fff, 30%);
+			}
 		}
 	}
 }

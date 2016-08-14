@@ -57,4 +57,25 @@
 			margin-right: 2px;
 		}
 	}
+
+	@media only screen and (max-width: 768px) {
+		padding-top: 0;
+		flex-direction: column;
+		align-items: center;
+
+		&__block {
+			margin-bottom: 20px;
+		}
+
+		&__copy {
+			text-align: center;
+			align-self: center;
+			img {
+				display: block;
+				margin: 0 auto;
+				margin-bottom: 10px;
+
+			}
+		}
+	}
 }

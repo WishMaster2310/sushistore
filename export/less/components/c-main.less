@@ -25,7 +25,6 @@
   }
   &__bg {
     background-size: cover;
-    background-attachment: fixed;
     background-position: 50% 0;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -57,13 +56,24 @@
     }
   }
   @media only screen and (max-width: 960px) {
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
     &__sidebar {
-      width: 200px;
+      order: 1;
+      margin-top: 0;
+      align-self: flex-end;
+      /* width: 200px;
       position: fixed;
       top: 0;
-      left: -200px;
+      left: -200px; */
     }
+    
     &__stage {
+      order: 2;
       float: none;
       margin-left: 0;
       width: 100%;
