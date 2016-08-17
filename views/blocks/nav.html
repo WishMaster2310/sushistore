@@ -10,7 +10,7 @@
 		{%- if item.type == 'link'  %}
 			<a class="c-nav__item" href="{{ item.url }}">{{ item.caption }}</a>
 		{%- elif item.type == 'menu' %}
-			<div class="c-nav__item c-nav__item--list">
+			<div class="c-nav__item c-nav__item--active c-nav__item--list">
 				<span class="c-nav__label">{{ item.caption }}</span>
 				<div class="c-subNav">
 					{%- for subItem in ctx.Menu %}
