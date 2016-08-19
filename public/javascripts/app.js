@@ -68,13 +68,34 @@ $(function() {
 		}
 
 		return
-	})
+	});
+
+	var headerAtivetel = 0;
+
+	$('.c-header__tel-handler').on('click', function() {
+
+			var len = $('.c-header__tel').length;
+
+			if(len > 1) {
+
+				if (headerAtivetel < len-1) {
+					headerAtivetel +=1;
+				} else {
+					headerAtivetel  = 0;
+				}
+
+				
+
+				$('.c-header__tel').removeClass('c-header__tel--active');
+				$('.c-header__tel').eq(headerAtivetel).addClass('c-header__tel--active');
+			}
+	});
 
 	$(window).on('resize', function() {
 
 		$('.c-navBox').stop().attr('style', '');
 		$('.c-header__burger').removeClass('c-header__burger--active')
 		
-	})
+	});
 
 });

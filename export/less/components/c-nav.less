@@ -66,7 +66,12 @@
 		}
 
 		&--active {
-			background-color: #fff;
+			//background-color: #fff;
+
+			.c-subNav {
+				display: block;
+				
+			}
 		}
 
 		&:hover {
@@ -76,6 +81,7 @@
 
 	&__item--active > &__label {
 		color: #2b2b2b;
+		background-color: #fff;
 	}
 
 	&__item:after {
@@ -95,8 +101,13 @@
 	}
 
 	&__item:hover {
-		background-color: #fff;
+		//background-color: #fff;
 	}
+
+	&__item--list:hover {
+		background-color: transparent;
+	}
+
 
 	&__label {
 		padding: 12px 28px;

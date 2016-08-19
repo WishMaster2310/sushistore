@@ -1,11 +1,16 @@
 <!-- Hero -->
 {%- set slider = ["blocks/slider/item_1.html", "blocks/slider/item_1.html" ,"blocks/slider/item_1.html"] -%}
 <div class="c-slider">
+	<div class="c-slider__item">
+		<img class="c-slider__fullimg" src="/images/slider2.png" alt="">
+	</div>
 	{% for item in slider %}
 	<div class="c-slider__item">
 		{% include item  %}
 	</div>
 	{% endfor %}
+	
+	
 </div>
 {% include "blocks/hero_category.html" %}
 <!-- /Hero -->
