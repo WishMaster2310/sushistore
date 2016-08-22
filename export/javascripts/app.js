@@ -110,6 +110,18 @@ $(function() {
 			return
 		}
 	});
-	$('#headerCityChooser').SumoSelect()
+	$('#headerCityChooser').SumoSelect();
+
+	$('.c-buyline__arr--top').on('click', function() {
+		var input = $(this).closest('.c-buyline').find('.c-buyline__input');
+		$(input).val(+$(input).val() + 1)
+	});
+
+	$('.c-buyline__arr--down').on('click', function() {
+		var input = $(this).closest('.c-buyline').find('.c-buyline__input');
+		if ($(input).val() > 1) {
+			$(input).val(+$(input).val() - 1)
+		}
+	});
 
 });
