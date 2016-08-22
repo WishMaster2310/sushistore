@@ -58,6 +58,51 @@
     </div>
   </div>
 </div>
+<div class="c-adds">
+  <div class="c-adds__header">
+    <div class="c-adds__title">СДЕЛАЙ ЁЩЕ ВКУСНЕЕ</div>
+  </div>
+  <div class="c-adds__col c-adds__col--lg">
+    <div class="c-adds__subtitle">Топпинги:</div>
+    <div class="c-adds__list">
+      {% for item in ctx.toppings  -%}
+        <div class="c-adds__list-item">
+          <label class="c-checkbox">
+            <input type="checkbox" name="toppings" value="{{ loop.index }}">
+            <span class="c-checkbox__frame"></span>{{ item.name }} <strong>{{ item.price }}</strong> руб.        
+          </label>
+        </div>
+      {% endfor -%}
+    </div>
+  </div>
+  <div  class="c-adds__col c-adds__col--sm">
+    <div class="c-adds__subtitle">Доп. соус:</div>
+    {% for item in ctx.souses  -%}
+        <div class="c-adds__list-item">
+          <label class="c-checkbox">
+            <input type="checkbox" name="souses" value="{{ loop.index }}">
+            <span class="c-checkbox__frame"></span> 
+            {{ item.name }} <strong>{{ item.price }}</strong> руб.
+          </label>
+        </div>
+      {% endfor -%}
+  </div>
+  <div  class="c-adds__col c-adds__col--sm">
+    <div class="c-adds__subtitle">Мясо:</div>
+    {% for item in ctx.meet  -%}
+        <div class="c-adds__list-item">
+          <label class="c-checkbox">
+            <input type="checkbox" name="meet" value="{{ loop.index }}">
+            <span class="c-checkbox__frame"></span> 
+            <span class="c-checkbox__label">{{ item.name }} <strong>{{ item.price }}</strong> руб.</span>    
+          </label>
+        </div>
+      {% endfor -%}
+  </div>
+  <div class="c-adds__result">
+    Сумма = <strong>214</strong> руб.
+  </div>
+</div>
 
 {% include "blocks/recomendation.html" %}
 {% endblock %} 

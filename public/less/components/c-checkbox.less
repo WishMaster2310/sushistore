@@ -1,0 +1,58 @@
+.c-checkbox {
+	position: relative;
+	overflow: hidden;
+	font-size: 12px;
+	cursor: pointer;
+	padding-left: 23px;
+	min-height: 23px;
+	padding-top: 2px;
+	display: block;
+	
+	
+	input {
+		display: none;
+		position: absolute;
+	}
+
+	input:checked + &__frame:after {
+		display: block;
+	}
+
+	strong {
+		font-weight: bold;
+		
+	}
+
+	&__frame {
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 17px;
+		height: 17px;
+		box-shadow: inset 0px 2px 4px #aaa;
+		border-radius: 4px;
+		border: 1px solid #fff;
+		background-color: #fff;
+		//position: relative;
+
+		&:after {
+			display: none;
+			content: "";
+			position:absolute;
+			top: 50%;
+			left: 50%;
+			width: image-width('../images/app_check2.png');
+			height: image-height('../images/app_check2.png');
+			background-image: data-uri('../images/app_check2.png');
+			margin-left: round(image-width('../images/app_check2.png')/2)*(-1);
+			margin-top: round(image-height('../images/app_check2.png')/2)*(-1);
+		}
+	}
+
+	&__label {
+		display: inline-block;
+		vertical-align: middle;
+		
+	}
+}
