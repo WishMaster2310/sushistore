@@ -98,4 +98,18 @@ $(function() {
 		
 	});
 
+	$('.j-fancy').on('click', function(e) {
+		e.preventDefault();
+
+		var target = $(this).attr('data-fancy');
+		if(target.length > 0) {
+			$.fancybox({
+				content: $(target)
+			})
+		}else {
+			return
+		}
+	});
+	$('#headerCityChooser').SumoSelect()
+
 });

@@ -30,297 +30,309 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#171717">
 
   <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link href="stylesheets/jquery.fancybox.css" rel="stylesheet" type="text/css">
+  <link href="stylesheets/sumoselect.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,500&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="c-header">
-    <div class="c-container c-container--expanded">
-      <div class="c-header__stupid-designer">
-        <div class="c-header__row">
-          <div class="c-header__col c-header__col--logo">
-            <a title="SushiStore - Суши с доставкой на дом" href="">
+  <div class="c-wrapper">
+    <!-- HEADER -->
+    <header class="c-header">
+      <div class="c-container c-container--expanded">
+        <div class="c-header__stupid-designer">
+          <div class="c-header__row">
+            <div class="c-header__col c-header__col--logo">
+              <a title="SushiStore - Суши с доставкой на дом" href="">
 
-              <img src="images/logo2.png" alt="SushiStore - Суши с доставкой на дом">
+                <img src="images/logo2.png" alt="SushiStore - Суши с доставкой на дом">
 
-            </a>
-          </div>
-          <div class="c-header__col c-header__col--left">
-            <select name="citySelect" id="headerCityChooser">
-              <option value="0">Москва</option>
-              <option value="1">Санкт-Петербург</option>
-            </select>
-          </div>
-
-          <div class="c-header__col c-header__col--center">
-            Доставка:
-            <div class="c-header__tel-rotator">
-              <a class="c-header__tel c-header__tel--active" href="tel:+74952300000">+7 (495) 230-00-00</a>
-              <a class="c-header__tel" href="tel:+74997043201">+7 (499) 704-32-01</a>
-              <a class="c-header__tel" href="tel:+71111111111">+7 (111) 111-11-11</a>
+              </a>
             </div>
-            <div class="c-header__tel-handler"><span class="c-icon c-icon--telhandler"></span>
+            <div class="c-header__col c-header__col--left">
+              <select name="citySelect" id="headerCityChooser">
+                <option value="0" selected>Москва</option>
+                <option value="1">Санкт-Петербург</option>
+              </select>
             </div>
-          </div>
 
-          <div class="c-header__col c-header__col--right">
-            <div class="c-cart">
-              <a class="c-cart__link" href="#">Корзина</a> — <span class="c-cart__amount">310 р.</span>
-            </div>
-            <div class="c-header__burger">
-              <span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- /HEADER -->
-
-
-  <main class="c-main">
-    <div class="c-main__back">
-
-      <div class="c-main__bg" style="background-image:  url(images/hero-bg.jpg)">
-        <video autoplay="" loop="" muted="" poster="/images/hero-bg.jpg">
-          <source src="uploads/video1.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
-            <source src="uploads/video1.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-
-        </video>
-      </div>
-    </div>
-    <div class="c-main__front">
-      <div class="c-container c-container--expanded c-main__container">
-        <div class="c-main__stage">
-
-          <ul class="c-bradcrumbs">
-            <li class="c-bradcrumbs__item">
-              <a href="">Главная</a>
-            </li>
-            <li class="c-bradcrumbs__item">
-              <span>Клубная карта</span>
-            </li>
-          </ul>
-          <h1 class="c-title">Клубная карта</h1>
-          <div class="c-wysiwyg c-page">
-            <h4>Общие правила участия в программе «Карта Почетного Клиента»</h4>
-            <img align="right" src="images/article-img-1.jpg" alt="">
-            <ol>
-              <li>Карта является персональной привилегией для участников Программы. Картой может пользоваться только тот человек, чье имя было указано при заполнении анкеты участника. Карту нельзя передавать другому лицу.</li>
-              <li>Компания оставляет за собой право исключить любого участника из Программы в случае нарушенияправил и условий Программы. Компания оставляет за собой право отказать в участии в Программе по своему усмотрению.</li>
-              <li>Каждый участник Программы несет ответственность за своевременное извещение Компании об изменениях адреса, телефона и прочих данных. Компания не несет ответственности за работу почты и в случае, если владелец карты вовремя не уведомил об
-                изменении его адреса.</li>
-              <li>Каждому участнику Программы рекомендуется следить за начислением баллов на счете.</li>
-              <li>Накопление и списание баллов происходит только при наличии карты. Для накопления баллов карта должна быть своевременно предъявлена при оплате счета.Если вы пользуетесь службой доставки, то вам необходимо сообщить номер своей карты оператору,
-                после чего на следующий день Вам будут начислены баллы.Совершать покупки баллами в службе доставке невозможно.</li>
-              <li>В случае возникновения у участника вопросов по текущим накоплениям, Компания оставляет за собой право дать ответ в течение 30 дней.</li>
-              <li>Накопленные баллы не могут быть переведены в наличные.1 бонус равен 1 рублю.</li>
-              <li>Баллы на карте должны быть использованы в течение 12-ти месяцев с момента первого накопления, в противном случае сумма будет списана.</li>
-              <li>Начисление баллов происходит на следующий день после посещения магазина.</li>
-              <li>При использовании баллов в счете магазина списание происходит в режиме реального времени, баллами можно оплатить не более 50% счета.</li>
-              <li>Использование начисленных баллов возможно только при условии заполнения всех обязательных полей анкеты участника.</li>
-              <li>В случае утери карты Компания не несет ответственности за сохранность баллов на утерянной карте.</li>
-              <li><a href="#">Скачать анкету</a>
-              </li>
-            </ol>
-          </div>
-
-        </div>
-        <div class="c-main__sidebar">
-
-          <aside class="c-navBox">
-            <a title="SushiStore - Суши с доставкой на дом" class="c-navBox__brand" href="">
-
-              <img class="c-navBox__logo" src="images/logo2.png" alt="SushiStore - Суши с доставкой на дом">
-
-            </a>
-            <nav class="c-nav c-navBox__menu" role="navigation">
-              <a class="c-nav__item" href="actions">Наши Акции</a>
-              <div class="c-nav__item c-nav__item--active c-nav__item--list">
-                <span class="c-nav__label">Наше Меню</span>
-                <div class="c-subNav">
-                  <a class="c-subNav__item" href="list">Новинки</a>
-                  <a class="c-subNav__item" href="list">Сеты</a>
-                  <span class="c-subNav__caption">Роллы</span>
-                  <div class="c-subNav__item c-subNav__item--list">
-                    <a class="c-subNav__link" href="list">Классические</a>
-
-                    <a class="c-subNav__link" href="list">Теплые</a>
-
-                    <a class="c-subNav__link" href="list">Хосо-Маки</a>
-                  </div>
-                  <span class="c-subNav__caption">Суши</span>
-                  <div class="c-subNav__item c-subNav__item--list">
-                    <a class="c-subNav__link" href="list">Гунканы</a>
-
-                    <a class="c-subNav__link" href="list">Нигири</a>
-                  </div>
-                  <span class="c-subNav__caption">Wok</span>
-                  <div class="c-subNav__item c-subNav__item--list">
-                    <a class="c-subNav__link" href="list">Лапша</a>
-
-                    <a class="c-subNav__link" href="list">Рис</a>
-
-                    <a class="c-subNav__link" href="list">Дополнения</a>
-                  </div>
-                  <a class="c-subNav__item" href="list">Салаты/Супы</a>
-                  <a class="c-subNav__item" href="list">Десерт</a>
-                  <a class="c-subNav__item" href="list">Напитки</a>
-                  <a class="c-subNav__item" href="list">Дополнения</a>
-                </div>
+            <div class="c-header__col c-header__col--center">
+              Доставка:
+              <div class="c-header__tel-rotator">
+                <a class="c-header__tel c-header__tel--active" href="tel:+74952300000">+7 (495) 230-00-00</a>
+                <a class="c-header__tel" href="tel:+74997043201">+7 (499) 704-32-01</a>
+                <a class="c-header__tel" href="tel:+71111111111">+7 (111) 111-11-11</a>
               </div>
-              <a class="c-nav__item" href="#">Ваши Отзывы</a>
-              <a class="c-nav__item" href="#">Личный Кабинет</a>
-              <a class="c-nav__item" href="article">Наша Доставка</a>
-              <a class="c-nav__item" href="article">Наши Адреса</a>
-              <a class="c-nav__item" href="article">Контроль Качества</a>
-              <a class="c-nav__item" href="article">Наша Команда</a>
-              <a class="c-nav__item" href="article">Связаться с Нами</a>
-            </nav>
-            <div class="c-navBox__footer" role="search">
-              <form class="c-navBox__search" action="/" method="Post">
-                <input type="text" name="siteSearch" placeholder="Поиск по сайту" class="c-navBox__input">
-              </form>
+              <div class="c-header__tel-handler"><span class="c-icon c-icon--telhandler"></span>
+              </div>
             </div>
-          </aside>
+
+            <div class="c-header__col c-header__col--right">
+              <div class="c-cart">
+                <a class="c-cart__link" href="#">Корзина</a> — <span class="c-cart__amount">310 р.</span>
+              </div>
+              <div class="c-header__burger">
+                <span></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </header>
+    <!-- /HEADER -->
 
-  <!-- FOOTER -->
-  <footer class="c-footer">
-    <div class="c-container c-container--expanded">
-      <div class="c-fmenu">
-        <div class="c-fmenu__col">
-          <a href="actions" class="c-footer__link c-fmenu__title">Наши Акции</a>
-          <a href="#" class="c-footer__link c-fmenu__title">Наше Меню</a>
-          <a href="#" class="c-footer__link c-fmenu__title">Ваши Отзывы</a>
-        </div>
-        <div class="c-fmenu__col">
-          <a href="#" class="c-footer__link c-fmenu__title">Личный Кабинет</a>
-          <a href="article" class="c-footer__link c-fmenu__title">Наша Доставка</a>
-          <a href="article" class="c-footer__link c-fmenu__title">Наши Адреса</a>
-        </div>
-        <div class="c-fmenu__col">
-          <a href="article" class="c-footer__link c-fmenu__title">Контроль Качества</a>
-          <a href="article" class="c-footer__link c-fmenu__title">Наша Команда</a>
-          <a href="article" class="c-footer__link c-fmenu__title">Связаться с Нами</a>
-        </div>
-        <div class="c-fmenu__col">
-          <a href="list" class="c-footer__link c-fmenu__title">Новинки</a>
-          <a href="list" class="c-footer__link c-fmenu__title">Сеты</a>
-        </div>
-        <div class="c-fmenu__col">
-          <div class="c-fmenu__title">Роллы</div>
-          <ul class="c-fmenu__list">
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Классические</a>
-            </li>
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Теплые</a>
-            </li>
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Хосо-Маки</a>
-            </li>
-          </ul>
-        </div>
-        <div class="c-fmenu__col">
-          <div class="c-fmenu__title">Суши</div>
-          <ul class="c-fmenu__list">
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Гунканы</a>
-            </li>
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Нигири</a>
-            </li>
-          </ul>
-        </div>
-        <div class="c-fmenu__col">
-          <div class="c-fmenu__title">Wok</div>
-          <ul class="c-fmenu__list">
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Лапша</a>
-            </li>
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Рис</a>
-            </li>
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Дополнения</a>
-            </li>
-          </ul>
-        </div>
-        <div class="c-fmenu__col">
-          <a href="list" class="c-footer__link c-fmenu__title">Салаты/Супы</a>
-          <a href="list" class="c-footer__link c-fmenu__title">Десерт</a>
-        </div>
-        <div class="c-fmenu__col">
-          <a href="list" class="c-footer__link c-fmenu__title">Напитки</a>
-          <a href="list" class="c-footer__link c-fmenu__title">Дополнения</a>
+
+    <main class="c-main">
+      <div class="c-main__back">
+
+        <div class="c-main__bg" style="background-image:  url(images/hero-bg.jpg)">
+          <video autoplay="" loop="" muted="" poster="/images/hero-bg.jpg">
+            <source src="uploads/video1.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+              <source src="uploads/video1.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+
+          </video>
         </div>
       </div>
+      <div class="c-main__front">
+        <div class="c-container c-container--expanded c-main__container">
+          <div class="c-main__stage">
 
-      <div class="c-fline">
-        <div class="c-fline__block">
-          <div class="c-fline__copy">
-            <img src="images/footer-logo.png" alt="">2016 © СушиStore. Все права защищены</div>
+            <ul class="c-bradcrumbs">
+              <li class="c-bradcrumbs__item">
+                <a href="">Главная</a>
+              </li>
+              <li class="c-bradcrumbs__item">
+                <span>Клубная карта</span>
+              </li>
+            </ul>
+            <h1 class="c-title">Клубная карта</h1>
+            <div class="c-wysiwyg c-page">
+              <h4>Общие правила участия в программе «Карта Почетного Клиента»</h4>
+              <img align="right" src="images/article-img-1.jpg" alt="">
+              <ol>
+                <li>Карта является персональной привилегией для участников Программы. Картой может пользоваться только тот человек, чье имя было указано при заполнении анкеты участника. Карту нельзя передавать другому лицу.</li>
+                <li>Компания оставляет за собой право исключить любого участника из Программы в случае нарушенияправил и условий Программы. Компания оставляет за собой право отказать в участии в Программе по своему усмотрению.</li>
+                <li>Каждый участник Программы несет ответственность за своевременное извещение Компании об изменениях адреса, телефона и прочих данных. Компания не несет ответственности за работу почты и в случае, если владелец карты вовремя не уведомил об
+                  изменении его адреса.</li>
+                <li>Каждому участнику Программы рекомендуется следить за начислением баллов на счете.</li>
+                <li>Накопление и списание баллов происходит только при наличии карты. Для накопления баллов карта должна быть своевременно предъявлена при оплате счета.Если вы пользуетесь службой доставки, то вам необходимо сообщить номер своей карты оператору,
+                  после чего на следующий день Вам будут начислены баллы.Совершать покупки баллами в службе доставке невозможно.</li>
+                <li>В случае возникновения у участника вопросов по текущим накоплениям, Компания оставляет за собой право дать ответ в течение 30 дней.</li>
+                <li>Накопленные баллы не могут быть переведены в наличные.1 бонус равен 1 рублю.</li>
+                <li>Баллы на карте должны быть использованы в течение 12-ти месяцев с момента первого накопления, в противном случае сумма будет списана.</li>
+                <li>Начисление баллов происходит на следующий день после посещения магазина.</li>
+                <li>При использовании баллов в счете магазина списание происходит в режиме реального времени, баллами можно оплатить не более 50% счета.</li>
+                <li>Использование начисленных баллов возможно только при условии заполнения всех обязательных полей анкеты участника.</li>
+                <li>В случае утери карты Компания не несет ответственности за сохранность баллов на утерянной карте.</li>
+                <li><a href="#">Скачать анкету</a>
+                </li>
+              </ol>
+            </div>
+
+          </div>
+          <div class="c-main__sidebar">
+
+            <aside class="c-navBox">
+              <a title="SushiStore - Суши с доставкой на дом" class="c-navBox__brand" href="">
+
+                <img class="c-navBox__logo" src="images/logo2.png" alt="SushiStore - Суши с доставкой на дом">
+
+              </a>
+              <nav class="c-nav c-navBox__menu" role="navigation">
+                <a class="c-nav__item" href="actions">Наши Акции</a>
+                <div class="c-nav__item c-nav__item--active c-nav__item--list">
+                  <span class="c-nav__label">Наше Меню</span>
+                  <div class="c-subNav">
+                    <a class="c-subNav__item" href="list">Новинки</a>
+                    <a class="c-subNav__item" href="list">Сеты</a>
+                    <span class="c-subNav__caption">Роллы</span>
+                    <div class="c-subNav__item c-subNav__item--list">
+                      <a class="c-subNav__link" href="list">Классические</a>
+
+                      <a class="c-subNav__link" href="list">Теплые</a>
+
+                      <a class="c-subNav__link" href="list">Хосо-Маки</a>
+                    </div>
+                    <span class="c-subNav__caption">Суши</span>
+                    <div class="c-subNav__item c-subNav__item--list">
+                      <a class="c-subNav__link" href="list">Гунканы</a>
+
+                      <a class="c-subNav__link" href="list">Нигири</a>
+                    </div>
+                    <span class="c-subNav__caption">Wok</span>
+                    <div class="c-subNav__item c-subNav__item--list">
+                      <a class="c-subNav__link" href="list">Лапша</a>
+
+                      <a class="c-subNav__link" href="list">Рис</a>
+
+                      <a class="c-subNav__link" href="list">Дополнения</a>
+                    </div>
+                    <a class="c-subNav__item" href="list">Салаты/Супы</a>
+                    <a class="c-subNav__item" href="list">Десерт</a>
+                    <a class="c-subNav__item" href="list">Напитки</a>
+                    <a class="c-subNav__item" href="list">Дополнения</a>
+                  </div>
+                </div>
+                <a class="c-nav__item" href="#">Ваши Отзывы</a>
+                <a class="c-nav__item" href="#">Личный Кабинет</a>
+                <a class="c-nav__item" href="article">Наша Доставка</a>
+                <a class="c-nav__item" href="article">Наши Адреса</a>
+                <a class="c-nav__item" href="article">Контроль Качества</a>
+                <a class="c-nav__item" href="article">Наша Команда</a>
+                <a class="c-nav__item" href="article">Связаться с Нами</a>
+              </nav>
+              <div class="c-navBox__footer" role="search">
+                <form class="c-navBox__search" action="/" method="Post">
+                  <input type="text" name="siteSearch" placeholder="Поиск по сайту" class="c-navBox__input">
+                </form>
+              </div>
+            </aside>
+          </div>
         </div>
-        <div class="c-fline__block">
-          <a href="#" class="c-fline__pseudo">Адреса магазинов</a>
-        </div>
-        <div class="c-fline__block">
-          <div class="c-fline__pay">
+      </div>
+    </main>
 
-            <img src="images/footer-money.png" alt="">
-            <img src="images/footer-visa.png" alt="">
-            <img src="images/footer-mastercard.png" alt="">
-
+    <!-- FOOTER -->
+    <footer class="c-footer">
+      <div class="c-container c-container--expanded">
+        <div class="c-fmenu">
+          <div class="c-fmenu__col">
+            <a href="actions" class="c-footer__link c-fmenu__title">Наши Акции</a>
+            <a href="#" class="c-footer__link c-fmenu__title">Наше Меню</a>
+            <a href="#" class="c-footer__link c-fmenu__title">Ваши Отзывы</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="#" class="c-footer__link c-fmenu__title">Личный Кабинет</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Наша Доставка</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Наши Адреса</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="article" class="c-footer__link c-fmenu__title">Контроль Качества</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Наша Команда</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Связаться с Нами</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="list" class="c-footer__link c-fmenu__title">Новинки</a>
+            <a href="list" class="c-footer__link c-fmenu__title">Сеты</a>
+          </div>
+          <div class="c-fmenu__col">
+            <div class="c-fmenu__title">Роллы</div>
+            <ul class="c-fmenu__list">
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Классические</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Теплые</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Хосо-Маки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-fmenu__col">
+            <div class="c-fmenu__title">Суши</div>
+            <ul class="c-fmenu__list">
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Гунканы</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Нигири</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-fmenu__col">
+            <div class="c-fmenu__title">Wok</div>
+            <ul class="c-fmenu__list">
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Лапша</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Рис</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Дополнения</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="list" class="c-footer__link c-fmenu__title">Салаты/Супы</a>
+            <a href="list" class="c-footer__link c-fmenu__title">Десерт</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="list" class="c-footer__link c-fmenu__title">Напитки</a>
+            <a href="list" class="c-footer__link c-fmenu__title">Дополнения</a>
           </div>
         </div>
 
-        <div class="c-fline__block">
-          <div class="c-fline__share">
-            <a href="#">
-              <img src="images/vk.png" alt="">
-            </a>
-            <a href="#">
-              <img src="images/fb.png" alt="">
-            </a>
-            <a href="#">
-              <img src="images/twitter.png" alt="">
-            </a>
-            <a href="#">
-              <img src="images/odnoclassniki.png" alt="">
-            </a>
+        <div class="c-fline">
+          <div class="c-fline__block">
+            <div class="c-fline__copy">
+              <img src="images/footer-logo.png" alt="">2016 © СушиStore. Все права защищены</div>
+          </div>
+          <div class="c-fline__block">
+            <a href="#" class="c-fline__pseudo">Адреса магазинов</a>
+          </div>
+          <div class="c-fline__block">
+            <div class="c-fline__pay">
+
+              <img src="images/footer-money.png" alt="">
+              <img src="images/footer-visa.png" alt="">
+              <img src="images/footer-mastercard.png" alt="">
+
+            </div>
+          </div>
+
+          <div class="c-fline__block">
+            <div class="c-fline__share">
+              <a href="#">
+                <img src="images/vk.png" alt="">
+              </a>
+              <a href="#">
+                <img src="images/fb.png" alt="">
+              </a>
+              <a href="#">
+                <img src="images/twitter.png" alt="">
+              </a>
+              <a href="#">
+                <img src="images/odnoclassniki.png" alt="">
+              </a>
+            </div>
+          </div>
+
+
+          <div class="c-fline__block">
+            <a href="#" class="c-fline__pseudo j-fancy" data-fancy="#cb_form">Заказать звонок</a>
+          </div>
+
+          <div class="c-fline__block">
+            <a href="tel:+74952300000" class="c-fline__tel">+7 (495) 230-00-00</a>
           </div>
         </div>
+      </div>
 
-
-        <div class="c-fline__block">
-          <a href="#" class="c-fline__pseudo">Заказать звонок</a>
+    </footer>
+    <div class="c-fmeta">
+      <div class="c-container c-container--expanded">
+        <div class="c-fmeta__description">
+          <p>Обращаем Ваше внимание на то, что информация, размещенная на сайте, носит исключительно информационно-рекламный характер, и не является офертой или публичной офертой.
+            <br>Указанные на сайте цены не являются окончательной ценой и могут быть в любое время изменены.</p>
         </div>
-
-        <div class="c-fline__block">
-          <a href="tel:+74952300000" class="c-fline__tel">+7 (495) 230-00-00</a>
+        <div class="c-fmeta__dev">
+          Разработка сайта - <a href="http://hcube.ru/" target="_blank">HCube</a>
         </div>
       </div>
     </div>
+    <!-- /FOOTER -->
 
-  </footer>
-  <div class="c-fmeta">
-    <div class="c-container c-container--expanded">
-      <div class="c-fmeta__description">
-        <p>Обращаем Ваше внимание на то, что информация, размещенная на сайте, носит исключительно информационно-рекламный характер, и не является офертой или публичной офертой.
-          <br>Указанные на сайте цены не являются окончательной ценой и могут быть в любое время изменены.</p>
-      </div>
-      <div class="c-fmeta__dev">
-        Разработка сайта - <a href="http://hcube.ru/" target="_blank">HCube</a>
+    <div style="1display: none">
+      <div id="cb_form">
+        Форма
       </div>
     </div>
+
   </div>
-  <!-- /FOOTER -->
-
+  <script src="javascripts/jquery.fancybox.pack.js"></script>
+  <script src="javascripts/jquery.sumoselect.min.js"></script>
   <script src="javascripts/app.min.js"></script>
 </body>

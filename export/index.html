@@ -30,495 +30,507 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#171717">
 
   <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link href="stylesheets/jquery.fancybox.css" rel="stylesheet" type="text/css">
+  <link href="stylesheets/sumoselect.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,500&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="c-header">
-    <div class="c-container c-container--expanded">
-      <div class="c-header__stupid-designer">
-        <div class="c-header__row">
-          <div class="c-header__col c-header__col--logo">
-            <a title="SushiStore - Суши с доставкой на дом" href="">
+  <div class="c-wrapper">
+    <!-- HEADER -->
+    <header class="c-header">
+      <div class="c-container c-container--expanded">
+        <div class="c-header__stupid-designer">
+          <div class="c-header__row">
+            <div class="c-header__col c-header__col--logo">
+              <a title="SushiStore - Суши с доставкой на дом" href="">
 
-              <img src="images/logo2.png" alt="SushiStore - Суши с доставкой на дом">
+                <img src="images/logo2.png" alt="SushiStore - Суши с доставкой на дом">
 
-            </a>
-          </div>
-          <div class="c-header__col c-header__col--left">
-            <select name="citySelect" id="headerCityChooser">
-              <option value="0">Москва</option>
-              <option value="1">Санкт-Петербург</option>
-            </select>
-          </div>
-
-          <div class="c-header__col c-header__col--center">
-            Доставка:
-            <div class="c-header__tel-rotator">
-              <a class="c-header__tel c-header__tel--active" href="tel:+74952300000">+7 (495) 230-00-00</a>
-              <a class="c-header__tel" href="tel:+74997043201">+7 (499) 704-32-01</a>
-              <a class="c-header__tel" href="tel:+71111111111">+7 (111) 111-11-11</a>
-            </div>
-            <div class="c-header__tel-handler"><span class="c-icon c-icon--telhandler"></span>
-            </div>
-          </div>
-
-          <div class="c-header__col c-header__col--right">
-            <div class="c-cart">
-              <a class="c-cart__link" href="#">Корзина</a> — <span class="c-cart__amount">310 р.</span>
-            </div>
-            <div class="c-header__burger">
-              <span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- /HEADER -->
-
-
-  <main class="c-main">
-    <div class="c-main__back">
-
-      <div class="c-main__bg" style="background-image:  url(images/hero-bg.jpg)">
-        <video autoplay="" loop="" muted="" poster="/images/hero-bg.jpg">
-          <source src="uploads/video1.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
-            <source src="uploads/video1.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-
-        </video>
-      </div>
-    </div>
-    <div class="c-main__front">
-      <div class="c-container c-container--expanded c-main__container">
-        <div class="c-main__stage">
-
-          <!-- Hero -->
-          <div class="c-slider">
-            <div class="c-slider__item">
-              <img class="c-slider__fullimg" src="images/slider2.png" alt="">
-            </div>
-
-            <div class="c-slider__item">
-              <a class="c-prom" href="item">
-                <div class="c-prom__inner">
-                  <div class="c-prom__col c-prom__col--img">
-                    <div class="c-prom__imgBox">
-                      <img class="c-prom__img" src="images/slider1.png" alt="Дабу сет">
-                      <div class="c-prom__labels">
-                        <div class="c-prom__label c-prom__label--name">Дабу сет</div>
-                        <br>
-                        <div class="c-prom__label c-prom__label--count">24&nbsp;шт. <span class="c-prom__price">599&nbsp;р.</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="c-prom__col c-prom__col--data">
-                    <div class="c-prom__title">Двойной дабу&nbsp;<small>/&nbsp;48 шт.</small>
-                    </div>
-                    <div class="c-prom__para"><span>ВСЕГО ЗА 1000 р</span>
-                    </div>
-                    <div class="c-prom__selection"><span>ЭКОНОМИЯ 338 р.</span>
-                    </div>
-                    <div class="c-prom__text">Калифорния с крабом, Калифорния с креветкой, Калифорния с угрем, Калифорния с лососем, Калифорния с копченым лососем, Калифа лайт ролл</div>
-                  </div>
-                </div>
               </a>
             </div>
-
-            <div class="c-slider__item">
-              <a class="c-prom" href="item">
-                <div class="c-prom__inner">
-                  <div class="c-prom__col c-prom__col--img">
-                    <div class="c-prom__imgBox">
-                      <img class="c-prom__img" src="images/slider1.png" alt="Дабу сет">
-                      <div class="c-prom__labels">
-                        <div class="c-prom__label c-prom__label--name">Дабу сет</div>
-                        <br>
-                        <div class="c-prom__label c-prom__label--count">24&nbsp;шт. <span class="c-prom__price">599&nbsp;р.</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="c-prom__col c-prom__col--data">
-                    <div class="c-prom__title">Двойной дабу&nbsp;<small>/&nbsp;48 шт.</small>
-                    </div>
-                    <div class="c-prom__para"><span>ВСЕГО ЗА 1000 р</span>
-                    </div>
-                    <div class="c-prom__selection"><span>ЭКОНОМИЯ 338 р.</span>
-                    </div>
-                    <div class="c-prom__text">Калифорния с крабом, Калифорния с креветкой, Калифорния с угрем, Калифорния с лососем, Калифорния с копченым лососем, Калифа лайт ролл</div>
-                  </div>
-                </div>
-              </a>
+            <div class="c-header__col c-header__col--left">
+              <select name="citySelect" id="headerCityChooser">
+                <option value="0" selected>Москва</option>
+                <option value="1">Санкт-Петербург</option>
+              </select>
             </div>
 
-            <div class="c-slider__item">
-              <a class="c-prom" href="item">
-                <div class="c-prom__inner">
-                  <div class="c-prom__col c-prom__col--img">
-                    <div class="c-prom__imgBox">
-                      <img class="c-prom__img" src="images/slider1.png" alt="Дабу сет">
-                      <div class="c-prom__labels">
-                        <div class="c-prom__label c-prom__label--name">Дабу сет</div>
-                        <br>
-                        <div class="c-prom__label c-prom__label--count">24&nbsp;шт. <span class="c-prom__price">599&nbsp;р.</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="c-prom__col c-prom__col--data">
-                    <div class="c-prom__title">Двойной дабу&nbsp;<small>/&nbsp;48 шт.</small>
-                    </div>
-                    <div class="c-prom__para"><span>ВСЕГО ЗА 1000 р</span>
-                    </div>
-                    <div class="c-prom__selection"><span>ЭКОНОМИЯ 338 р.</span>
-                    </div>
-                    <div class="c-prom__text">Калифорния с крабом, Калифорния с креветкой, Калифорния с угрем, Калифорния с лососем, Калифорния с копченым лососем, Калифа лайт ролл</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-
-
-          </div>
-          <div class="c-kindsWrapper">
-            <div class="c-kinds">
-              <a class="c-kinds__item" href="list">
-                <div class="c-kinds__img" style="background-image: url(images/category1.jpg)"></div>
-                <div class="c-kinds__caption">Наборы</div>
-              </a>
-
-              <a class="c-kinds__item" href="list">
-                <div class="c-kinds__img" style="background-image: url(images/category2.jpg)"></div>
-                <div class="c-kinds__caption">Роллы</div>
-              </a>
-
-              <a class="c-kinds__item" href="list">
-                <div class="c-kinds__img" style="background-image: url(images/category3.jpg)"></div>
-                <div class="c-kinds__caption">Суши</div>
-              </a>
-
-              <a class="c-kinds__item" href="list">
-                <div class="c-kinds__img" style="background-image: url(images/category4.jpg)"></div>
-                <div class="c-kinds__caption">WOK</div>
-              </a>
-
-              <a class="c-kinds__item" href="list">
-                <div class="c-kinds__img" style="background-image: url(images/category5.jpg)"></div>
-                <div class="c-kinds__caption">Новинки</div>
-              </a>
-
-              <a class="c-kinds__item" href="list">
-                <div class="c-kinds__img" style="background-image: url(images/category6.jpg)"></div>
-                <div class="c-kinds__caption">Салаты/супы</div>
-              </a>
-
-              <a class="c-kinds__item" href="list">
-                <div class="c-kinds__img" style="background-image: url(images/category7.jpg)"></div>
-                <div class="c-kinds__caption">Десерт</div>
-              </a>
-
-              <a class="c-kinds__item" href="list">
-                <div class="c-kinds__img" style="background-image: url(images/category8.jpg)"></div>
-                <div class="c-kinds__caption">Напитки</div>
-              </a>
-            </div>
-          </div>
-          <!-- /Hero -->
-
-
-        </div>
-        <div class="c-main__sidebar">
-
-          <aside class="c-navBox">
-            <a title="SushiStore - Суши с доставкой на дом" class="c-navBox__brand" href="">
-
-              <img class="c-navBox__logo" src="images/logo2.png" alt="SushiStore - Суши с доставкой на дом">
-
-            </a>
-            <nav class="c-nav c-navBox__menu" role="navigation">
-              <a class="c-nav__item" href="actions">Наши Акции</a>
-              <div class="c-nav__item c-nav__item--active c-nav__item--list">
-                <span class="c-nav__label">Наше Меню</span>
-                <div class="c-subNav">
-                  <a class="c-subNav__item" href="list">Новинки</a>
-                  <a class="c-subNav__item" href="list">Сеты</a>
-                  <span class="c-subNav__caption">Роллы</span>
-                  <div class="c-subNav__item c-subNav__item--list">
-                    <a class="c-subNav__link" href="list">Классические</a>
-
-                    <a class="c-subNav__link" href="list">Теплые</a>
-
-                    <a class="c-subNav__link" href="list">Хосо-Маки</a>
-                  </div>
-                  <span class="c-subNav__caption">Суши</span>
-                  <div class="c-subNav__item c-subNav__item--list">
-                    <a class="c-subNav__link" href="list">Гунканы</a>
-
-                    <a class="c-subNav__link" href="list">Нигири</a>
-                  </div>
-                  <span class="c-subNav__caption">Wok</span>
-                  <div class="c-subNav__item c-subNav__item--list">
-                    <a class="c-subNav__link" href="list">Лапша</a>
-
-                    <a class="c-subNav__link" href="list">Рис</a>
-
-                    <a class="c-subNav__link" href="list">Дополнения</a>
-                  </div>
-                  <a class="c-subNav__item" href="list">Салаты/Супы</a>
-                  <a class="c-subNav__item" href="list">Десерт</a>
-                  <a class="c-subNav__item" href="list">Напитки</a>
-                  <a class="c-subNav__item" href="list">Дополнения</a>
-                </div>
+            <div class="c-header__col c-header__col--center">
+              Доставка:
+              <div class="c-header__tel-rotator">
+                <a class="c-header__tel c-header__tel--active" href="tel:+74952300000">+7 (495) 230-00-00</a>
+                <a class="c-header__tel" href="tel:+74997043201">+7 (499) 704-32-01</a>
+                <a class="c-header__tel" href="tel:+71111111111">+7 (111) 111-11-11</a>
               </div>
-              <a class="c-nav__item" href="#">Ваши Отзывы</a>
-              <a class="c-nav__item" href="#">Личный Кабинет</a>
-              <a class="c-nav__item" href="article">Наша Доставка</a>
-              <a class="c-nav__item" href="article">Наши Адреса</a>
-              <a class="c-nav__item" href="article">Контроль Качества</a>
-              <a class="c-nav__item" href="article">Наша Команда</a>
-              <a class="c-nav__item" href="article">Связаться с Нами</a>
-            </nav>
-            <div class="c-navBox__footer" role="search">
-              <form class="c-navBox__search" action="/" method="Post">
-                <input type="text" name="siteSearch" placeholder="Поиск по сайту" class="c-navBox__input">
-              </form>
+              <div class="c-header__tel-handler"><span class="c-icon c-icon--telhandler"></span>
+              </div>
             </div>
-          </aside>
-        </div>
-      </div>
-    </div>
-  </main>
 
-  <!-- advantages  -->
-  <section class="c-advantagesWrapper">
-    <div class="c-container c-container--expanded">
-      <div class="c-advantages">
-        <h2 class="c-advantages__title">Заказать суши с доставкой на дом</h2>
-        <p class="c-advantages__text">Сушиstore - это сеть из более, чем 35-и суши-баров, службы доставки суши, роллов, сетов, wok (лапши и риса). Что отличает Сушиstore от остальных?</p>
-        <div class="c-advantages__row">
-          <div class="c-advantages__col">
-            <ul class="c-advantages__list">
-              <li>Качество продуктов. Доставка продуктов в наши суши-бары, происходит ежедневно, этим обусловлена исключительная свежесть наших суши и роллов.</li>
-              <li>Качество приготовления. Генеральный директор Сушиstore, когда-то сам работал шеф-поваром, поэтому все сотрудники Сушиstore - настоящие профессионалы и фанаты своего дела. Секрет вкуса наших блюд, кроется в основательной разработке рецептуры,
-                строгому следованию технологии приготовления и свежайшим продуктам, на чем основана японская кухня.</li>
-              <li>Доступность и удобство. Многие суши-бары находятся в прикассовых зонах супермаркетов, поэтому пока вы делаете покупки в магазине, мы приготовим ваш заказ. Так же вы можете сделать заказ к удобному для вас времени.</li>
-              <li>Так же вы можете сделать заказ по телефону, через сайт или мобильное приложение и самостоятельно забрать его в удобное для вас время.</li>
-              <li>Заказ на доставку можно сделать по многоканальному телефону, через сайт или мобильное приложение ежедневно с 10:00 до 22:30.</li>
-            </ul>
-          </div>
-          <div class="c-advantages__col">
-            <ul class="c-advantages__list">
-              <li>Быстрая доставка</li>
-              <li>Профессиональные операторы примут и обработают ваш заказ, проинформируют о текущих акциях, порекомендуют и подробно расскажут, как происходит доставка роллов.</li>
-              <li>Среднее время приготовления заказа - 15 минут.</li>
-              <li>Доставка суши займет около 60 минут, в зависимости от удаленности адреса от ближайшего суши-бара и загруженности дорог.</li>
-              <li>Заказ можно оплатить, как наличными, так и кредитной картой курьеру.</li>
-              <li>Минимальная сумма заказа 699 рублей</li>
-              <li>Мы честны со своими покупателями, поэтому не включаем расходы на доставку в стоимость суши, доставка оплачивается отдельно - 100 рублей.</li>
-              <li>Ежемесячно проводятся различные привлекательные акции.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- / advantages  -->
-  <!-- App  -->
-  <section class="c-appWrapper">
-    <div class="c-container c-container--expanded">
-      <div class="c-app">
-        <div class="c-app__row">
-          <div class="c-app__col">
-            <div class="c-app__imgBox">
-              <img src="images/app-devices.png" alt="">
-            </div>
-          </div>
-          <div class="c-app__col">
-            <h2 class="c-app__title">Наше приложение</h2>
-            <p class="c-app__text">Оставьте свой номер телефона или электронную почту
-              <br>и мы вышлем ссылку на приложение.</p>
-
-            <div class="c-app__data">
-              <form class="c-appForm" action="/" method="POST">
-                <label class="c-appForm__label">Телефон</label>
-                <div class="c-appForm__line">
-                  <div class="c-appForm__col">
-                    <input class="c-appForm__input c-appForm__input--tel" name="getAppTel" type="tel" placeholder="+7 (___) ___ __ __" required>
-                  </div>
-                  <div class="c-appForm__col c-appForm__col--right">
-                    <button type="submit" class="c-appForm__btn">Отправить по Смс</button>
-                  </div>
-                </div>
-              </form>
-
-              <form class="c-appForm" action="/" method="POST">
-                <label class="c-appForm__label">Эл. почта</label>
-                <div class="c-appForm__line">
-                  <div class="c-appForm__col">
-                    <input class="c-appForm__input" name="getAppTel" type="email" placeholder="email" required>
-                  </div>
-                  <div class="c-appForm__col c-appForm__col--right">
-                    <button type="submit" class="c-appForm__btn">Отправить по почте</button>
-                  </div>
-
-                </div>
-                <div>
-                  <label class="c-appForm__checkbox">
-                    <input type="checkbox" name="subscribe">
-                    <span class="c-appForm__checkDiv"></span>	Уведомлять о скидках и акция (без спама)
-                  </label>
-                </div>
-              </form>
-
-              <div class="c-app__line">
-                <img src="images/set-gplay.png" alt="Google Play Market">
-                <img src="images/set-appStore.png" alt="Apple App Store">
-                <img src="images/set-win.png" alt="Windows Apps">
+            <div class="c-header__col c-header__col--right">
+              <div class="c-cart">
+                <a class="c-cart__link" href="#">Корзина</a> — <span class="c-cart__amount">310 р.</span>
+              </div>
+              <div class="c-header__burger">
+                <span></span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- / App  -->
+    </header>
+    <!-- /HEADER -->
 
-  <!-- FOOTER -->
-  <footer class="c-footer">
-    <div class="c-container c-container--expanded">
-      <div class="c-fmenu">
-        <div class="c-fmenu__col">
-          <a href="actions" class="c-footer__link c-fmenu__title">Наши Акции</a>
-          <a href="#" class="c-footer__link c-fmenu__title">Наше Меню</a>
-          <a href="#" class="c-footer__link c-fmenu__title">Ваши Отзывы</a>
-        </div>
-        <div class="c-fmenu__col">
-          <a href="#" class="c-footer__link c-fmenu__title">Личный Кабинет</a>
-          <a href="article" class="c-footer__link c-fmenu__title">Наша Доставка</a>
-          <a href="article" class="c-footer__link c-fmenu__title">Наши Адреса</a>
-        </div>
-        <div class="c-fmenu__col">
-          <a href="article" class="c-footer__link c-fmenu__title">Контроль Качества</a>
-          <a href="article" class="c-footer__link c-fmenu__title">Наша Команда</a>
-          <a href="article" class="c-footer__link c-fmenu__title">Связаться с Нами</a>
-        </div>
-        <div class="c-fmenu__col">
-          <a href="list" class="c-footer__link c-fmenu__title">Новинки</a>
-          <a href="list" class="c-footer__link c-fmenu__title">Сеты</a>
-        </div>
-        <div class="c-fmenu__col">
-          <div class="c-fmenu__title">Роллы</div>
-          <ul class="c-fmenu__list">
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Классические</a>
-            </li>
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Теплые</a>
-            </li>
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Хосо-Маки</a>
-            </li>
-          </ul>
-        </div>
-        <div class="c-fmenu__col">
-          <div class="c-fmenu__title">Суши</div>
-          <ul class="c-fmenu__list">
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Гунканы</a>
-            </li>
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Нигири</a>
-            </li>
-          </ul>
-        </div>
-        <div class="c-fmenu__col">
-          <div class="c-fmenu__title">Wok</div>
-          <ul class="c-fmenu__list">
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Лапша</a>
-            </li>
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Рис</a>
-            </li>
-            <li class="c-fmenu__list-item">
-              <a href="list" class="c-footer__link">Дополнения</a>
-            </li>
-          </ul>
-        </div>
-        <div class="c-fmenu__col">
-          <a href="list" class="c-footer__link c-fmenu__title">Салаты/Супы</a>
-          <a href="list" class="c-footer__link c-fmenu__title">Десерт</a>
-        </div>
-        <div class="c-fmenu__col">
-          <a href="list" class="c-footer__link c-fmenu__title">Напитки</a>
-          <a href="list" class="c-footer__link c-fmenu__title">Дополнения</a>
+
+    <main class="c-main">
+      <div class="c-main__back">
+
+        <div class="c-main__bg" style="background-image:  url(images/hero-bg.jpg)">
+          <video autoplay="" loop="" muted="" poster="/images/hero-bg.jpg">
+            <source src="uploads/video1.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+              <source src="uploads/video1.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+
+          </video>
         </div>
       </div>
+      <div class="c-main__front">
+        <div class="c-container c-container--expanded c-main__container">
+          <div class="c-main__stage">
 
-      <div class="c-fline">
-        <div class="c-fline__block">
-          <div class="c-fline__copy">
-            <img src="images/footer-logo.png" alt="">2016 © СушиStore. Все права защищены</div>
+            <!-- Hero -->
+            <div class="c-slider">
+              <div class="c-slider__item">
+                <img class="c-slider__fullimg" src="images/slider2.png" alt="">
+              </div>
+
+              <div class="c-slider__item">
+                <a class="c-prom" href="item">
+                  <div class="c-prom__inner">
+                    <div class="c-prom__col c-prom__col--img">
+                      <div class="c-prom__imgBox">
+                        <img class="c-prom__img" src="images/slider1.png" alt="Дабу сет">
+                        <div class="c-prom__labels">
+                          <div class="c-prom__label c-prom__label--name">Дабу сет</div>
+                          <br>
+                          <div class="c-prom__label c-prom__label--count">24&nbsp;шт. <span class="c-prom__price">599&nbsp;р.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-prom__col c-prom__col--data">
+                      <div class="c-prom__title">Двойной дабу&nbsp;<small>/&nbsp;48 шт.</small>
+                      </div>
+                      <div class="c-prom__para"><span>ВСЕГО ЗА 1000 р</span>
+                      </div>
+                      <div class="c-prom__selection"><span>ЭКОНОМИЯ 338 р.</span>
+                      </div>
+                      <div class="c-prom__text">Калифорния с крабом, Калифорния с креветкой, Калифорния с угрем, Калифорния с лососем, Калифорния с копченым лососем, Калифа лайт ролл</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="c-slider__item">
+                <a class="c-prom" href="item">
+                  <div class="c-prom__inner">
+                    <div class="c-prom__col c-prom__col--img">
+                      <div class="c-prom__imgBox">
+                        <img class="c-prom__img" src="images/slider1.png" alt="Дабу сет">
+                        <div class="c-prom__labels">
+                          <div class="c-prom__label c-prom__label--name">Дабу сет</div>
+                          <br>
+                          <div class="c-prom__label c-prom__label--count">24&nbsp;шт. <span class="c-prom__price">599&nbsp;р.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-prom__col c-prom__col--data">
+                      <div class="c-prom__title">Двойной дабу&nbsp;<small>/&nbsp;48 шт.</small>
+                      </div>
+                      <div class="c-prom__para"><span>ВСЕГО ЗА 1000 р</span>
+                      </div>
+                      <div class="c-prom__selection"><span>ЭКОНОМИЯ 338 р.</span>
+                      </div>
+                      <div class="c-prom__text">Калифорния с крабом, Калифорния с креветкой, Калифорния с угрем, Калифорния с лососем, Калифорния с копченым лососем, Калифа лайт ролл</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="c-slider__item">
+                <a class="c-prom" href="item">
+                  <div class="c-prom__inner">
+                    <div class="c-prom__col c-prom__col--img">
+                      <div class="c-prom__imgBox">
+                        <img class="c-prom__img" src="images/slider1.png" alt="Дабу сет">
+                        <div class="c-prom__labels">
+                          <div class="c-prom__label c-prom__label--name">Дабу сет</div>
+                          <br>
+                          <div class="c-prom__label c-prom__label--count">24&nbsp;шт. <span class="c-prom__price">599&nbsp;р.</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-prom__col c-prom__col--data">
+                      <div class="c-prom__title">Двойной дабу&nbsp;<small>/&nbsp;48 шт.</small>
+                      </div>
+                      <div class="c-prom__para"><span>ВСЕГО ЗА 1000 р</span>
+                      </div>
+                      <div class="c-prom__selection"><span>ЭКОНОМИЯ 338 р.</span>
+                      </div>
+                      <div class="c-prom__text">Калифорния с крабом, Калифорния с креветкой, Калифорния с угрем, Калифорния с лососем, Калифорния с копченым лососем, Калифа лайт ролл</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+
+
+            </div>
+            <div class="c-kindsWrapper">
+              <div class="c-kinds">
+                <a class="c-kinds__item" href="list">
+                  <div class="c-kinds__img" style="background-image: url(images/category1.jpg)"></div>
+                  <div class="c-kinds__caption">Наборы</div>
+                </a>
+
+                <a class="c-kinds__item" href="list">
+                  <div class="c-kinds__img" style="background-image: url(images/category2.jpg)"></div>
+                  <div class="c-kinds__caption">Роллы</div>
+                </a>
+
+                <a class="c-kinds__item" href="list">
+                  <div class="c-kinds__img" style="background-image: url(images/category3.jpg)"></div>
+                  <div class="c-kinds__caption">Суши</div>
+                </a>
+
+                <a class="c-kinds__item" href="list">
+                  <div class="c-kinds__img" style="background-image: url(images/category4.jpg)"></div>
+                  <div class="c-kinds__caption">WOK</div>
+                </a>
+
+                <a class="c-kinds__item" href="list">
+                  <div class="c-kinds__img" style="background-image: url(images/category5.jpg)"></div>
+                  <div class="c-kinds__caption">Новинки</div>
+                </a>
+
+                <a class="c-kinds__item" href="list">
+                  <div class="c-kinds__img" style="background-image: url(images/category6.jpg)"></div>
+                  <div class="c-kinds__caption">Салаты/супы</div>
+                </a>
+
+                <a class="c-kinds__item" href="list">
+                  <div class="c-kinds__img" style="background-image: url(images/category7.jpg)"></div>
+                  <div class="c-kinds__caption">Десерт</div>
+                </a>
+
+                <a class="c-kinds__item" href="list">
+                  <div class="c-kinds__img" style="background-image: url(images/category8.jpg)"></div>
+                  <div class="c-kinds__caption">Напитки</div>
+                </a>
+              </div>
+            </div>
+            <!-- /Hero -->
+
+
+          </div>
+          <div class="c-main__sidebar">
+
+            <aside class="c-navBox">
+              <a title="SushiStore - Суши с доставкой на дом" class="c-navBox__brand" href="">
+
+                <img class="c-navBox__logo" src="images/logo2.png" alt="SushiStore - Суши с доставкой на дом">
+
+              </a>
+              <nav class="c-nav c-navBox__menu" role="navigation">
+                <a class="c-nav__item" href="actions">Наши Акции</a>
+                <div class="c-nav__item c-nav__item--active c-nav__item--list">
+                  <span class="c-nav__label">Наше Меню</span>
+                  <div class="c-subNav">
+                    <a class="c-subNav__item" href="list">Новинки</a>
+                    <a class="c-subNav__item" href="list">Сеты</a>
+                    <span class="c-subNav__caption">Роллы</span>
+                    <div class="c-subNav__item c-subNav__item--list">
+                      <a class="c-subNav__link" href="list">Классические</a>
+
+                      <a class="c-subNav__link" href="list">Теплые</a>
+
+                      <a class="c-subNav__link" href="list">Хосо-Маки</a>
+                    </div>
+                    <span class="c-subNav__caption">Суши</span>
+                    <div class="c-subNav__item c-subNav__item--list">
+                      <a class="c-subNav__link" href="list">Гунканы</a>
+
+                      <a class="c-subNav__link" href="list">Нигири</a>
+                    </div>
+                    <span class="c-subNav__caption">Wok</span>
+                    <div class="c-subNav__item c-subNav__item--list">
+                      <a class="c-subNav__link" href="list">Лапша</a>
+
+                      <a class="c-subNav__link" href="list">Рис</a>
+
+                      <a class="c-subNav__link" href="list">Дополнения</a>
+                    </div>
+                    <a class="c-subNav__item" href="list">Салаты/Супы</a>
+                    <a class="c-subNav__item" href="list">Десерт</a>
+                    <a class="c-subNav__item" href="list">Напитки</a>
+                    <a class="c-subNav__item" href="list">Дополнения</a>
+                  </div>
+                </div>
+                <a class="c-nav__item" href="#">Ваши Отзывы</a>
+                <a class="c-nav__item" href="#">Личный Кабинет</a>
+                <a class="c-nav__item" href="article">Наша Доставка</a>
+                <a class="c-nav__item" href="article">Наши Адреса</a>
+                <a class="c-nav__item" href="article">Контроль Качества</a>
+                <a class="c-nav__item" href="article">Наша Команда</a>
+                <a class="c-nav__item" href="article">Связаться с Нами</a>
+              </nav>
+              <div class="c-navBox__footer" role="search">
+                <form class="c-navBox__search" action="/" method="Post">
+                  <input type="text" name="siteSearch" placeholder="Поиск по сайту" class="c-navBox__input">
+                </form>
+              </div>
+            </aside>
+          </div>
         </div>
-        <div class="c-fline__block">
-          <a href="#" class="c-fline__pseudo">Адреса магазинов</a>
+      </div>
+    </main>
+
+    <!-- advantages  -->
+    <section class="c-advantagesWrapper">
+      <div class="c-container c-container--expanded">
+        <div class="c-advantages">
+          <h2 class="c-advantages__title">Заказать суши с доставкой на дом</h2>
+          <p class="c-advantages__text">Сушиstore - это сеть из более, чем 35-и суши-баров, службы доставки суши, роллов, сетов, wok (лапши и риса). Что отличает Сушиstore от остальных?</p>
+          <div class="c-advantages__row">
+            <div class="c-advantages__col">
+              <ul class="c-advantages__list">
+                <li>Качество продуктов. Доставка продуктов в наши суши-бары, происходит ежедневно, этим обусловлена исключительная свежесть наших суши и роллов.</li>
+                <li>Качество приготовления. Генеральный директор Сушиstore, когда-то сам работал шеф-поваром, поэтому все сотрудники Сушиstore - настоящие профессионалы и фанаты своего дела. Секрет вкуса наших блюд, кроется в основательной разработке рецептуры,
+                  строгому следованию технологии приготовления и свежайшим продуктам, на чем основана японская кухня.</li>
+                <li>Доступность и удобство. Многие суши-бары находятся в прикассовых зонах супермаркетов, поэтому пока вы делаете покупки в магазине, мы приготовим ваш заказ. Так же вы можете сделать заказ к удобному для вас времени.</li>
+                <li>Так же вы можете сделать заказ по телефону, через сайт или мобильное приложение и самостоятельно забрать его в удобное для вас время.</li>
+                <li>Заказ на доставку можно сделать по многоканальному телефону, через сайт или мобильное приложение ежедневно с 10:00 до 22:30.</li>
+              </ul>
+            </div>
+            <div class="c-advantages__col">
+              <ul class="c-advantages__list">
+                <li>Быстрая доставка</li>
+                <li>Профессиональные операторы примут и обработают ваш заказ, проинформируют о текущих акциях, порекомендуют и подробно расскажут, как происходит доставка роллов.</li>
+                <li>Среднее время приготовления заказа - 15 минут.</li>
+                <li>Доставка суши займет около 60 минут, в зависимости от удаленности адреса от ближайшего суши-бара и загруженности дорог.</li>
+                <li>Заказ можно оплатить, как наличными, так и кредитной картой курьеру.</li>
+                <li>Минимальная сумма заказа 699 рублей</li>
+                <li>Мы честны со своими покупателями, поэтому не включаем расходы на доставку в стоимость суши, доставка оплачивается отдельно - 100 рублей.</li>
+                <li>Ежемесячно проводятся различные привлекательные акции.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="c-fline__block">
-          <div class="c-fline__pay">
+      </div>
+    </section>
+    <!-- / advantages  -->
+    <!-- App  -->
+    <section class="c-appWrapper">
+      <div class="c-container c-container--expanded">
+        <div class="c-app">
+          <div class="c-app__row">
+            <div class="c-app__col">
+              <div class="c-app__imgBox">
+                <img src="images/app-devices.png" alt="">
+              </div>
+            </div>
+            <div class="c-app__col">
+              <h2 class="c-app__title">Наше приложение</h2>
+              <p class="c-app__text">Оставьте свой номер телефона или электронную почту
+                <br>и мы вышлем ссылку на приложение.</p>
 
-            <img src="images/footer-money.png" alt="">
-            <img src="images/footer-visa.png" alt="">
-            <img src="images/footer-mastercard.png" alt="">
+              <div class="c-app__data">
+                <form class="c-appForm" action="/" method="POST">
+                  <label class="c-appForm__label">Телефон</label>
+                  <div class="c-appForm__line">
+                    <div class="c-appForm__col">
+                      <input class="c-appForm__input c-appForm__input--tel" name="getAppTel" type="tel" placeholder="+7 (___) ___ __ __" required>
+                    </div>
+                    <div class="c-appForm__col c-appForm__col--right">
+                      <button type="submit" class="c-appForm__btn">Отправить по Смс</button>
+                    </div>
+                  </div>
+                </form>
 
+                <form class="c-appForm" action="/" method="POST">
+                  <label class="c-appForm__label">Эл. почта</label>
+                  <div class="c-appForm__line">
+                    <div class="c-appForm__col">
+                      <input class="c-appForm__input" name="getAppTel" type="email" placeholder="email" required>
+                    </div>
+                    <div class="c-appForm__col c-appForm__col--right">
+                      <button type="submit" class="c-appForm__btn">Отправить по почте</button>
+                    </div>
+
+                  </div>
+                  <div>
+                    <label class="c-appForm__checkbox">
+                      <input type="checkbox" name="subscribe">
+                      <span class="c-appForm__checkDiv"></span>	Уведомлять о скидках и акция (без спама)
+                    </label>
+                  </div>
+                </form>
+
+                <div class="c-app__line">
+                  <img src="images/set-gplay.png" alt="Google Play Market">
+                  <img src="images/set-appStore.png" alt="Apple App Store">
+                  <img src="images/set-win.png" alt="Windows Apps">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / App  -->
+
+    <!-- FOOTER -->
+    <footer class="c-footer">
+      <div class="c-container c-container--expanded">
+        <div class="c-fmenu">
+          <div class="c-fmenu__col">
+            <a href="actions" class="c-footer__link c-fmenu__title">Наши Акции</a>
+            <a href="#" class="c-footer__link c-fmenu__title">Наше Меню</a>
+            <a href="#" class="c-footer__link c-fmenu__title">Ваши Отзывы</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="#" class="c-footer__link c-fmenu__title">Личный Кабинет</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Наша Доставка</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Наши Адреса</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="article" class="c-footer__link c-fmenu__title">Контроль Качества</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Наша Команда</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Связаться с Нами</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="list" class="c-footer__link c-fmenu__title">Новинки</a>
+            <a href="list" class="c-footer__link c-fmenu__title">Сеты</a>
+          </div>
+          <div class="c-fmenu__col">
+            <div class="c-fmenu__title">Роллы</div>
+            <ul class="c-fmenu__list">
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Классические</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Теплые</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Хосо-Маки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-fmenu__col">
+            <div class="c-fmenu__title">Суши</div>
+            <ul class="c-fmenu__list">
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Гунканы</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Нигири</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-fmenu__col">
+            <div class="c-fmenu__title">Wok</div>
+            <ul class="c-fmenu__list">
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Лапша</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Рис</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Дополнения</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="list" class="c-footer__link c-fmenu__title">Салаты/Супы</a>
+            <a href="list" class="c-footer__link c-fmenu__title">Десерт</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="list" class="c-footer__link c-fmenu__title">Напитки</a>
+            <a href="list" class="c-footer__link c-fmenu__title">Дополнения</a>
           </div>
         </div>
 
-        <div class="c-fline__block">
-          <div class="c-fline__share">
-            <a href="#">
-              <img src="images/vk.png" alt="">
-            </a>
-            <a href="#">
-              <img src="images/fb.png" alt="">
-            </a>
-            <a href="#">
-              <img src="images/twitter.png" alt="">
-            </a>
-            <a href="#">
-              <img src="images/odnoclassniki.png" alt="">
-            </a>
+        <div class="c-fline">
+          <div class="c-fline__block">
+            <div class="c-fline__copy">
+              <img src="images/footer-logo.png" alt="">2016 © СушиStore. Все права защищены</div>
+          </div>
+          <div class="c-fline__block">
+            <a href="#" class="c-fline__pseudo">Адреса магазинов</a>
+          </div>
+          <div class="c-fline__block">
+            <div class="c-fline__pay">
+
+              <img src="images/footer-money.png" alt="">
+              <img src="images/footer-visa.png" alt="">
+              <img src="images/footer-mastercard.png" alt="">
+
+            </div>
+          </div>
+
+          <div class="c-fline__block">
+            <div class="c-fline__share">
+              <a href="#">
+                <img src="images/vk.png" alt="">
+              </a>
+              <a href="#">
+                <img src="images/fb.png" alt="">
+              </a>
+              <a href="#">
+                <img src="images/twitter.png" alt="">
+              </a>
+              <a href="#">
+                <img src="images/odnoclassniki.png" alt="">
+              </a>
+            </div>
+          </div>
+
+
+          <div class="c-fline__block">
+            <a href="#" class="c-fline__pseudo j-fancy" data-fancy="#cb_form">Заказать звонок</a>
+          </div>
+
+          <div class="c-fline__block">
+            <a href="tel:+74952300000" class="c-fline__tel">+7 (495) 230-00-00</a>
           </div>
         </div>
+      </div>
 
-
-        <div class="c-fline__block">
-          <a href="#" class="c-fline__pseudo">Заказать звонок</a>
+    </footer>
+    <div class="c-fmeta">
+      <div class="c-container c-container--expanded">
+        <div class="c-fmeta__description">
+          <p>Обращаем Ваше внимание на то, что информация, размещенная на сайте, носит исключительно информационно-рекламный характер, и не является офертой или публичной офертой.
+            <br>Указанные на сайте цены не являются окончательной ценой и могут быть в любое время изменены.</p>
         </div>
-
-        <div class="c-fline__block">
-          <a href="tel:+74952300000" class="c-fline__tel">+7 (495) 230-00-00</a>
+        <div class="c-fmeta__dev">
+          Разработка сайта - <a href="http://hcube.ru/" target="_blank">HCube</a>
         </div>
       </div>
     </div>
+    <!-- /FOOTER -->
 
-  </footer>
-  <div class="c-fmeta">
-    <div class="c-container c-container--expanded">
-      <div class="c-fmeta__description">
-        <p>Обращаем Ваше внимание на то, что информация, размещенная на сайте, носит исключительно информационно-рекламный характер, и не является офертой или публичной офертой.
-          <br>Указанные на сайте цены не являются окончательной ценой и могут быть в любое время изменены.</p>
-      </div>
-      <div class="c-fmeta__dev">
-        Разработка сайта - <a href="http://hcube.ru/" target="_blank">HCube</a>
+    <div style="1display: none">
+      <div id="cb_form">
+        Форма
       </div>
     </div>
+
   </div>
-  <!-- /FOOTER -->
-
+  <script src="javascripts/jquery.fancybox.pack.js"></script>
+  <script src="javascripts/jquery.sumoselect.min.js"></script>
   <script src="javascripts/app.min.js"></script>
 </body>
