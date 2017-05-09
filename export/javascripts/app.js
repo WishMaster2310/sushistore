@@ -128,4 +128,15 @@ $(function() {
 		dots: true,
 		arrows: false
 	});
+
+	$('#form-tel').mask('+7 (999) 999-99-99');
+
+	$('.c-btn__scroll-to').on('click', function(event) {
+		var attrVal = $(this).attr('href');
+		event.preventDefault();
+
+		$('html, body').animate({
+	        scrollTop: $(attrVal).offset().top
+	    }, 1000);
+	});
 });
