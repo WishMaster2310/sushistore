@@ -1,0 +1,83 @@
+.c-offer {
+	padding: 20px 0 45px;
+	background: url('../images/offer-bg.jpg') no-repeat center;
+	background-size: cover;
+	border-top: 1px dashed #c9c9c9;
+	border-bottom: 1px dashed #c9c9c9;
+
+	&__title {
+		margin-bottom: 50px; 
+		font-size: round(66/14em, 3);
+		line-height: 1.2;
+		font-style: italic;
+		color: #000;
+		text-align: center;
+
+		@media screen and (max-width: 1280px) {
+			font-size: round(48/14em, 3);
+		}
+
+		@media screen and (max-width: 767px) {
+			font-size: round(32/14em, 3);
+		}
+	}
+
+	&__row {
+		.clearfix();
+		margin: 0 -15px;
+
+		@media screen and (max-width: 767px) {
+			margin: 0;
+		}
+		
+		&-img {
+			margin: 0 -19px;
+
+			@media screen and (max-width: 1280px) {
+				margin: 0;
+				overflow: hidden;
+			}
+
+			@media screen and (max-width: 767px) {
+				display: none;
+			}
+		}
+	}
+
+	&__col {
+		width: 20%;
+		float: left;
+		padding: 0 15px;
+
+		@media screen and (max-width: 767px) {
+			width: 100%;
+			float: none;
+			padding: 20px;
+		}
+
+		&-img {
+			margin-bottom: 40px;
+			padding: 0;
+			text-align: center;
+		}
+	}
+
+	&__text {
+		font-size: round(16/14em, 3);
+		line-height: round(18/16, 3);
+		font-family: @sec-font;
+		color: #000;
+
+		strong {
+			font-weight: bold;
+		}
+
+		&-wrapper {
+			padding: 0 45px;
+
+			@media screen and (max-width: 767px) {
+				padding: 0;
+			}
+		}
+	}
+}

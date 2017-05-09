@@ -124,4 +124,8 @@ $(function() {
 		}
 	});
 
+	$('.c-banner__slider').slick({
+		dots: true,
+		arrows: false
+	});
 });

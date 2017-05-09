@@ -1,0 +1,674 @@
+<!doctype html>
+<!--[if IE 7]>
+<html class="ie7 lt-ie10 lt-ie9 lt-ie8" lang="ru"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8 lt-ie10 lt-ie9" lang="ru"><![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9 lt-ie10" lang="ru"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+
+  <meta charset="utf-8">
+  <title>SushiStore - Суши с доставкой на дом</title>
+
+  <meta content="доставка еды на дом" name="description">
+  <meta content="суши роллы заказать Москва" name="keywords">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <meta content="telephone=no" name="format-detection">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="true">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+  <meta name="theme-color" content="#171717" />
+  <meta name="msapplication-navbutton-color" content="#171717">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#171717">
+
+  <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link href="stylesheets/jquery.fancybox.css" rel="stylesheet" type="text/css">
+  <link href="stylesheets/sumoselect.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,700,500&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="c-wrapper">
+    <!-- HEADER -->
+    <header class="c-header">
+      <div class="c-container c-container--expanded">
+        <div class="c-header__stupid-designer">
+          <div class="c-header__row">
+            <div class="c-header__col c-header__col--logo">
+              <a title="SushiStore - Суши с доставкой на дом" href="">
+
+                <img src="images/logo2.png" alt="SushiStore - Суши с доставкой на дом">
+
+              </a>
+            </div>
+            <div class="c-header__col c-header__col--left">
+              <select name="citySelect" id="headerCityChooser">
+                <option value="0" selected>Москва</option>
+                <option value="1">Санкт-Петербург</option>
+              </select>
+            </div>
+
+            <div class="c-header__col c-header__col--center">
+              Доставка:
+              <div class="c-header__tel-rotator">
+                <a class="c-header__tel c-header__tel--active" href="tel:+74952300000">+7 (495) 230-00-00</a>
+                <a class="c-header__tel" href="tel:+74997043201">+7 (499) 704-32-01</a>
+                <a class="c-header__tel" href="tel:+71111111111">+7 (111) 111-11-11</a>
+              </div>
+              <div class="c-header__tel-handler"><span class="c-icon c-icon--telhandler"></span>
+              </div>
+            </div>
+
+            <div class="c-header__col c-header__col--right">
+              <div class="c-cart">
+                <a class="c-cart__link" href="#">Корзина</a> — <span class="c-cart__amount">310 р.</span>
+              </div>
+              <div class="c-header__burger">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /HEADER -->
+
+
+    <main class="c-main">
+      <div class="c-main__back">
+
+        <div class="c-main__bg" style="background-image:  url(images/hero-bg.jpg)">
+          <video autoplay="" loop="" muted="" poster="/images/hero-bg.jpg">
+            <source src="uploads/video1.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+              <source src="uploads/video1.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+
+          </video>
+        </div>
+      </div>
+      <div class="c-main__front">
+        <div class="c-container c-container--expanded c-main__container">
+          <div class="c-main__stage">
+
+            <ul class="c-bradcrumbs">
+              <li class="c-bradcrumbs__item">
+                <a href="">Главная</a>
+              </li>
+              <li class="c-bradcrumbs__item">
+                <span>Франшиза Сушиstore</span>
+              </li>
+            </ul>
+
+            <h1 class="c-title">Франшиза Сушиstore</h1>
+            <div class="c-btn-rounded__wrapper">
+              <div class="c-btn-rounded__col--left">
+                <a href="#" class="c-btn-rounded c-btn-rounded--cont">Контакты</a>
+                <a href="#" class="c-btn-rounded c-btn-rounded--sm c-btn-rounded--pres">Скачать презентацию</a>
+              </div>
+              <div class="c-btn-rounded__col--right">
+                <a href="#" class="c-btn-rounded c-btn-rounded--req">Оставить заявку</a>
+              </div>
+            </div>
+
+            <div class="c-wrapper__bg">
+              <section class="c-banner">
+                <div class="c-banner__slider">
+                  <div class="c-banner__item" style="background-image: url('images/lp-slide-1.jpg')">
+                    <div class="c-banner__text-wrapper">
+                      <div class="c-banner__text-item">
+                        <p class="c-banner__text c-banner__text--red">Готовая франшиза СушиStore:</p>
+                        <p class="c-banner__text">2-ая Владимирская</p>
+                      </div>
+                      <div class="c-banner__text-item">
+                        <p class="c-banner__text">Выручка 2&nbsp;млн руб в&nbsp;месяц</p>
+                        <p class="c-banner__text">40000 квартир в&nbsp;зоне</p>
+                      </div>
+                      <a href="#" class="c-btn-rounded c-btn-rounded--sm c-btn-rounded--cont">Купить сейчас</a>
+                    </div>
+                  </div>
+                  <div class="c-banner__item" style="background-image: url('images/lp-slide-1.jpg')">
+                    <div class="c-banner__text-wrapper">
+                      <div class="c-banner__text-item">
+                        <p class="c-banner__text c-banner__text--red">Готовая франшиза СушиStore:</p>
+                        <p class="c-banner__text">2-ая Владимирская</p>
+                      </div>
+                      <div class="c-banner__text-item">
+                        <p class="c-banner__text">Выручка 2&nbsp;млн руб в&nbsp;месяц</p>
+                        <p class="c-banner__text">40000 квартир в&nbsp;зоне</p>
+                      </div>
+                      <a href="#" class="c-btn-rounded c-btn-rounded--sm c-btn-rounded--cont">Купить сейчас</a>
+                    </div>
+                  </div>
+                  <div class="c-banner__item" style="background-image: url('images/lp-slide-1.jpg')">
+                    <div class="c-banner__text-wrapper">
+                      <div class="c-banner__text-item">
+                        <p class="c-banner__text c-banner__text--red">Готовая франшиза СушиStore:</p>
+                        <p class="c-banner__text">2-ая Владимирская</p>
+                      </div>
+                      <div class="c-banner__text-item">
+                        <p class="c-banner__text">Выручка 2&nbsp;млн руб в&nbsp;месяц</p>
+                        <p class="c-banner__text">40000 квартир в&nbsp;зоне</p>
+                      </div>
+                      <a href="#" class="c-btn-rounded c-btn-rounded--sm c-btn-rounded--cont">Купить сейчас</a>
+                    </div>
+                  </div>
+                  <div class="c-banner__item" style="background-image: url('images/lp-slide-1.jpg')">
+                    <div class="c-banner__text-wrapper">
+                      <div class="c-banner__text-item">
+                        <p class="c-banner__text c-banner__text--red">Готовая франшиза СушиStore:</p>
+                        <p class="c-banner__text">2-ая Владимирская</p>
+                      </div>
+                      <div class="c-banner__text-item">
+                        <p class="c-banner__text">Выручка 2&nbsp;млн руб в&nbsp;месяц</p>
+                        <p class="c-banner__text">40000 квартир в&nbsp;зоне</p>
+                      </div>
+                      <a href="#" class="c-btn-rounded c-btn-rounded--sm c-btn-rounded--cont">Купить сейчас</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="c-features">
+                <div class="c-features__row">
+                  <div class="c-features__col">
+                    <div class="c-features__item">
+                      <img class="c-features__icon" src="images/features-icon-1.png" alt="">
+                      <p class="c-features__text c-features__text--sec">Средняя выручка
+                        <br>суши-бара в&nbsp;месяц</p>
+                      <p class="c-features__text c-features__text--main">1&nbsp;200&nbsp;000&nbsp;руб. - 1&nbsp;500&nbsp;000&nbsp;руб.</p>
+                    </div>
+                  </div>
+                  <div class="c-features__col">
+                    <div class="c-features__item">
+                      <img class="c-features__icon" src="images/features-icon-2.png" alt="">
+                      <p class="c-features__text c-features__text--sec">Оборот суши-баров</p>
+                      <p class="c-features__text c-features__text--main">до&nbsp;35&nbsp;000&nbsp;000 в&nbsp;год</p>
+                    </div>
+                  </div>
+                  <div class="c-features__col">
+                    <div class="c-features__item">
+                      <img class="c-features__icon" src="images/features-icon-3.png" alt="">
+                      <p class="c-features__text c-features__text--main">Более 100&nbsp;000</p>
+                      <p class="c-features__text c-features__text--sec">транзакций
+                        <br>ежемесячно</p>
+                    </div>
+                  </div>
+                  <div class="c-features__col">
+                    <div class="c-features__item">
+                      <img class="c-features__icon" src="images/features-icon-4.png" alt="">
+                      <p class="c-features__text c-features__text--sec">Средний доход</p>
+                      <p class="c-features__text c-features__text--main">200&nbsp;000 руб. - 300&nbsp;000&nbsp;руб.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-features__row">
+                  <div class="c-features__col">
+                    <div class="c-features__item">
+                      <img class="c-features__icon" src="images/features-icon-5.png" alt="">
+                      <p class="c-features__text c-features__text--sec">Собственный производственный цех</p>
+                      <p class="c-features__text c-features__text--main">по&nbsp;заготовке полуфабрикатов</p>
+                    </div>
+                  </div>
+                  <div class="c-features__col">
+                    <div class="c-features__item">
+                      <img class="c-features__icon" src="images/features-icon-6.png" alt="">
+                      <p class="c-features__text c-features__text--main">Внутренний контроль всех объектов</p>
+                      <p class="c-features__text c-features__text--sec">(около 25&nbsp;сотрудников обеспечивающие контроль и&nbsp;безопасность сети)</p>
+                    </div>
+                  </div>
+                  <div class="c-features__col">
+                    <div class="c-features__item">
+                      <img class="c-features__icon" src="images/features-icon-7.png" alt="">
+                      <p class="c-features__text c-features__text--main">Более 80&nbsp;сотрудников</p>
+                      <p class="c-features__text c-features__text--sec">собственной службы доставки</p>
+                    </div>
+                  </div>
+                  <div class="c-features__col">
+                    <div class="c-features__item">
+                      <img class="c-features__icon" src="images/features-icon-8.png" alt="">
+                      <p class="c-features__text c-features__text--main">15&nbsp;сотрудников</p>
+                      <p class="c-features__text c-features__text--sec">беспрерывно работающего</p>
+                      <p class="c-features__text c-features__text--main">call-центра</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="c-reasons">
+                <div class="c-reasons__row-img">
+                  <div class="c-reasons__col-3">
+                    <img src="images/reasons-img-1.png" alt="">
+                  </div>
+                  <div class="c-reasons__col-3">
+                    <img src="images/reasons-img-2.png" alt="">
+                  </div>
+                  <div class="c-reasons__col-3">
+                    <img src="images/reasons-img-3.png" alt="">
+                  </div>
+                  <div class="c-reasons__col-3">
+                    <img src="images/reasons-img-4.png" alt="">
+                  </div>
+                </div>
+                <div class="c-reasons__text-wrapper">
+                  <p class="c-reasons__text">
+                    Проект &laquo;СушиStore&raquo; предоставляет возможность открыть свое предприятие, пользуясь всеми преимуществами
+                    <br>уже выстроенного бренда. Вы&nbsp;получаете компанию, где в&nbsp;течение долгих лет были оптимизированы рабочие процессы, а&nbsp;риски сведены к&nbsp;нулю.
+                  </p>
+                </div>
+                <h2 class="c-reasons__title">Почему &laquo;СушиStore&raquo;?</h2>
+                <div class="c-reasons__item-wrapper">
+                  <div class="c-reasons__row">
+                    <div class="c-reasons__col-6">
+                      <div class="c-reasons__item">
+                        <img class="c-reasons__icon" src="images/reasons-icon-1.png" alt="">
+                        <p class="c-reasons__subtitle">
+                          Лидер рынка
+                        </p>
+                        <p class="c-reasons__text">
+                          Проект &laquo;СушиStore&raquo;&nbsp;&mdash; крупнейшая сеть формата TAKE AWAY в&nbsp;России.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="c-reasons__col-6">
+                      <div class="c-reasons__item">
+                        <img class="c-reasons__icon" src="images/reasons-icon-2.png" alt="">
+                        <p class="c-reasons__subtitle">
+                          Оригинальное меню
+                        </p>
+                        <p class="c-reasons__text">
+                          Бренд-шеф проекта &laquo;СушиStore&raquo; разрабатывает уникальные блюда японской кухни, учитывая потребности и&nbsp;пожелания гостей, а&nbsp;так&nbsp;же руководствуясь мировыми трендами гастрономической индустрии Японии, России и&nbsp;мира.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-reasons__row">
+                    <div class="c-reasons__col-6">
+                      <div class="c-reasons__item">
+                        <img class="c-reasons__icon" src="images/reasons-icon-3.png" alt="">
+                        <p class="c-reasons__subtitle">
+                          Соотношение цена/качество
+                        </p>
+                        <p class="c-reasons__text">
+                          Проект &laquo;СушиStore&raquo; входит в&nbsp;число самых узнаваемых и&nbsp;популярных мест, где можно вкусно поесть за&nbsp;приемлемую цену, сделав покупку в&nbsp;суши-баре или заказав доставку к&nbsp;удобному для Вас времени.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="c-reasons__col-6">
+                      <div class="c-reasons__item">
+                        <img class="c-reasons__icon" src="images/reasons-icon-4.png" alt="">
+                        <p class="c-reasons__subtitle">
+                          Продвижение бренда
+                        </p>
+                        <p class="c-reasons__text">
+                          Наличие бонусной программы и&nbsp;акций привлекающих гостей со&nbsp;всех уголков столицы, области и&nbsp;других регионов.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-reasons__btn-wrapper h-divider">
+                  <a class="c-btn-rounded c-btn-rounded--req" href="#">Оставить заявку</a>
+                </div>
+                <div class="c-reasons__dia">
+                  <div class="c-reasons__dia-row">
+                    <p class="c-reasons__dia-title h-ib-t c-reasons__dia-fl-l">
+                      Диаграмма
+                      <br>соотношения
+                      <br>заказов
+                    </p>
+                    <img class="c-reasons__dia-img h-ib-t c-reasons__dia-fl-r" src="images/reasons-dia-1.jpg" alt="">
+                  </div>
+                  <p class="c-reasons__text c-reasons__dia-abs-text">
+                    Благодаря успеху в&nbsp;сфере гостеприимства проект успешно развивает франчайзинговую сеть. Становясь партнером проекта, Вы&nbsp;приобретаете права на&nbsp;успешный бренд, получаете прибыльный бизнес и&nbsp;вносите свой вклад в&nbsp;развитие гастрономической
+                    индустрии России.
+                  </p>
+                  <div class="c-reasons__dia-row">
+                    <div class="c-reasons__dia-col h-ib-b">
+                      <p class="c-reasons__dia-title">
+                        Диаграмма
+                        <br>соотношения
+                        <br>заказов
+                      </p>
+                      <img class="c-reasons__dia-img" src="images/reasons-dia-2.jpg" alt="">
+                    </div>
+                    <div class="c-reasons__dia-col h-ib-b">
+                      <p class="c-reasons__dia-title">
+                        Диаграмма
+                        <br>соотношения
+                        <br>заказов
+                      </p>
+                      <img class="c-reasons__dia-img" src="images/reasons-dia-3.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="c-offer">
+                <h2 class="c-offer__title">
+
+			Мы&nbsp;предлагаем
+
+		</h2>
+                <div class="c-offer__row c-offer__row-img">
+                  <div class="c-offer__col c-offer__col-img">
+                    <img src="images/offer-img-1.png" alt="">
+                  </div>
+                  <div class="c-offer__col c-offer__col-img">
+                    <img src="images/offer-img-2.png" alt="">
+                  </div>
+                  <div class="c-offer__col c-offer__col-img">
+                    <img src="images/offer-img-3.png" alt="">
+                  </div>
+                  <div class="c-offer__col c-offer__col-img">
+                    <img src="images/offer-img-4.png" alt="">
+                  </div>
+                  <div class="c-offer__col c-offer__col-img">
+                    <img src="images/offer-img-5.png" alt="">
+                  </div>
+                </div>
+                <div class="c-offer__row c-offer__text-wrapper">
+                  <div class="c-offer__col">
+                    <p class="c-offer__text">
+                      Комплексное очное <strong>обучение франчази</strong> в&nbsp;головном офисе и&nbsp;профессиональная поддержка по&nbsp;всем вопросам ведения бизнеса
+                    </p>
+                  </div>
+                  <div class="c-offer__col">
+                    <p class="c-offer__text">
+                      <strong>Оригинальное меню</strong>, разработанное нашим бренд-шефом, с&nbsp;сезонными обновлениями и&nbsp;спецпредложениями
+                    </p>
+                  </div>
+                  <div class="c-offer__col">
+                    <p class="c-offer__text">
+                      Помощь <strong>в&nbsp;маркетинговой поддержке</strong> и&nbsp;в&nbsp;продвижении суши-бара
+                    </p>
+                  </div>
+                  <div class="c-offer__col">
+                    <p class="c-offer__text">
+                      <strong>Подготовка и&nbsp;стажировка персонала</strong>, а&nbsp;так&nbsp;же его оценка с&nbsp;точки зрения возможности работы в&nbsp;проекте
+                    </p>
+                  </div>
+                  <div class="c-offer__col">
+                    <p class="c-offer__text">
+                      <strong>Единый call-центр</strong> службы доставки и&nbsp;предзаказа
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <section class="c-contact">
+                <h2 class="c-contact__title">
+
+			Свяжитесь с&nbsp;нами!
+
+		</h2>
+                <p class="c-contact__subtitle">
+                  Информация по&nbsp;вопросам франчайзинга доступна
+                </p>
+                <div class="c-contact__item">
+                  <img class="c-contact__col" src="images/contact-tel.png" alt="">
+                  <div class="c-contact__col">
+                    <p class="c-contact__text">по телефону:</p>
+                    <a href="tel:+7(926)559-00-49" class="c-contact__link c-contact__link--noline">+ <nobr>7 (926)559-00-49</nobr></a>
+                  </div>
+                </div>
+                <div class="c-contact__item">
+                  <img class="c-contact__col" src="images/contact-mail.png" alt="">
+                  <div class="c-contact__col">
+                    <p class="c-contact__text">электронной почте:</p>
+                    <a href="mailto:fr@sushistore.ru" class="c-contact__link">fr@sushistore.ru</nobr></a>
+                  </div>
+                </div>
+                <p class="c-contact__name">
+                  Югай Марика Юрьевна
+                </p>
+                <div class="c-contact__form">
+                  <p class="c-contact__form-text">
+                    Или воспользуйтесь формой обратной связи:
+                  </p>
+                  <div class="c-contact__container">
+                    <form action="" method="">
+                      <div class="c-contact__form-row">
+                        <label for="form-name">ФИО</label>
+                        <input id="form-name" type="text">
+                      </div>
+                      <div class="c-contact__form-row">
+                        <label for="form-city">Город, страна</label>
+                        <input id="form-city" type="text">
+                      </div>
+                      <div class="c-contact__form-row">
+                        <label for="form-tel">Номер телефона</label>
+                        <input id="form-tel" type="tel">
+                      </div>
+                      <div class="c-contact__form-row">
+                        <label for="form-mail">Почта</label>
+                        <input id="form-mail" type="email">
+                      </div>
+                      <div class="c-contact__form-row c-contact__form-row--area">
+                        <label for="form-message">Сообщение</label>
+                        <textarea name="" rows="5" id="form-message"></textarea>
+                      </div>
+                      <div class="c-contact__row">
+                        <div class="c-contact__col-fl-l">
+                          <img class="c-contact__form-captcha-img" src="images/captcha.jpg" alt="">
+                          <input class="c-contact__form-captcha" type="text">
+                        </div>
+                        <div class="c-contact__col-fl-r">
+                          <button class="c-btn-rounded c-btn-rounded--form" type="submit">Отправить заявку</button>
+                        </div </div>
+                    </form>
+                    </div>
+                  </div>
+              </section>
+              </div>
+
+            </div>
+            <div class="c-main__sidebar">
+
+              <aside class="c-navBox">
+                <a title="SushiStore - Суши с доставкой на дом" class="c-navBox__brand" href="">
+
+                  <img class="c-navBox__logo" src="images/logo2.png" alt="SushiStore - Суши с доставкой на дом">
+
+                </a>
+                <nav class="c-nav c-navBox__menu" role="navigation">
+                  <a class="c-nav__item" href="actions">Наши Акции</a>
+                  <div class="c-nav__item c-nav__item--active c-nav__item--list">
+                    <span class="c-nav__label">Наше Меню</span>
+                    <div class="c-subNav">
+                      <a class="c-subNav__item" href="list">Новинки</a>
+                      <a class="c-subNav__item" href="list">Сеты</a>
+                      <span class="c-subNav__caption">Роллы</span>
+                      <div class="c-subNav__item c-subNav__item--list">
+                        <a class="c-subNav__link" href="list">Классические</a>
+
+                        <a class="c-subNav__link" href="list">Теплые</a>
+
+                        <a class="c-subNav__link" href="list">Хосо-Маки</a>
+                      </div>
+                      <span class="c-subNav__caption">Суши</span>
+                      <div class="c-subNav__item c-subNav__item--list">
+                        <a class="c-subNav__link" href="list">Гунканы</a>
+
+                        <a class="c-subNav__link" href="list">Нигири</a>
+                      </div>
+                      <span class="c-subNav__caption">Wok</span>
+                      <div class="c-subNav__item c-subNav__item--list">
+                        <a class="c-subNav__link" href="list">Лапша</a>
+
+                        <a class="c-subNav__link" href="list">Рис</a>
+
+                        <a class="c-subNav__link" href="list">Дополнения</a>
+                      </div>
+                      <a class="c-subNav__item" href="list">Салаты/Супы</a>
+                      <a class="c-subNav__item" href="list">Десерт</a>
+                      <a class="c-subNav__item" href="list">Напитки</a>
+                      <a class="c-subNav__item" href="list">Дополнения</a>
+                    </div>
+                  </div>
+                  <a class="c-nav__item" href="#">Ваши Отзывы</a>
+                  <a class="c-nav__item" href="#">Личный Кабинет</a>
+                  <a class="c-nav__item" href="article">Наша Доставка</a>
+                  <a class="c-nav__item" href="article">Наши Адреса</a>
+                  <a class="c-nav__item" href="article">Контроль Качества</a>
+                  <a class="c-nav__item" href="article">Наша Команда</a>
+                  <a class="c-nav__item" href="article">Связаться с Нами</a>
+                </nav>
+                <div class="c-navBox__footer" role="search">
+                  <form class="c-navBox__search" action="/" method="Post">
+                    <input type="text" name="siteSearch" placeholder="Поиск по сайту" class="c-navBox__input">
+                  </form>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="c-footer">
+      <div class="c-container c-container--expanded">
+        <div class="c-fmenu">
+          <div class="c-fmenu__col">
+            <a href="actions" class="c-footer__link c-fmenu__title">Наши Акции</a>
+            <a href="#" class="c-footer__link c-fmenu__title">Наше Меню</a>
+            <a href="#" class="c-footer__link c-fmenu__title">Ваши Отзывы</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="#" class="c-footer__link c-fmenu__title">Личный Кабинет</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Наша Доставка</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Наши Адреса</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="article" class="c-footer__link c-fmenu__title">Контроль Качества</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Наша Команда</a>
+            <a href="article" class="c-footer__link c-fmenu__title">Связаться с Нами</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="list" class="c-footer__link c-fmenu__title">Новинки</a>
+            <a href="list" class="c-footer__link c-fmenu__title">Сеты</a>
+          </div>
+          <div class="c-fmenu__col">
+            <div class="c-fmenu__title">Роллы</div>
+            <ul class="c-fmenu__list">
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Классические</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Теплые</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Хосо-Маки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-fmenu__col">
+            <div class="c-fmenu__title">Суши</div>
+            <ul class="c-fmenu__list">
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Гунканы</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Нигири</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-fmenu__col">
+            <div class="c-fmenu__title">Wok</div>
+            <ul class="c-fmenu__list">
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Лапша</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Рис</a>
+              </li>
+              <li class="c-fmenu__list-item">
+                <a href="list" class="c-footer__link">Дополнения</a>
+              </li>
+            </ul>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="list" class="c-footer__link c-fmenu__title">Салаты/Супы</a>
+            <a href="list" class="c-footer__link c-fmenu__title">Десерт</a>
+          </div>
+          <div class="c-fmenu__col">
+            <a href="list" class="c-footer__link c-fmenu__title">Напитки</a>
+            <a href="list" class="c-footer__link c-fmenu__title">Дополнения</a>
+          </div>
+        </div>
+
+        <div class="c-fline">
+          <div class="c-fline__block">
+            <div class="c-fline__copy">
+              <img src="images/footer-logo.png" alt="">2016 © СушиStore. Все права защищены</div>
+          </div>
+          <div class="c-fline__block">
+            <a href="#" class="c-fline__pseudo">Адреса магазинов</a>
+          </div>
+          <div class="c-fline__block">
+            <div class="c-fline__pay">
+
+              <img src="images/footer-money.png" alt="">
+              <img src="images/footer-visa.png" alt="">
+              <img src="images/footer-mastercard.png" alt="">
+
+            </div>
+          </div>
+
+          <div class="c-fline__block">
+            <div class="c-fline__share">
+              <a href="#">
+                <img src="images/vk.png" alt="">
+              </a>
+              <a href="#">
+                <img src="images/fb.png" alt="">
+              </a>
+              <a href="#">
+                <img src="images/twitter.png" alt="">
+              </a>
+              <a href="#">
+                <img src="images/odnoclassniki.png" alt="">
+              </a>
+            </div>
+          </div>
+
+
+          <div class="c-fline__block">
+            <a href="#" class="c-fline__pseudo j-fancy" data-fancy="#cb_form">Заказать звонок</a>
+          </div>
+
+          <div class="c-fline__block">
+            <a href="tel:+74952300000" class="c-fline__tel">+7 (495) 230-00-00</a>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+    <div class="c-fmeta">
+      <div class="c-container c-container--expanded">
+        <div class="c-fmeta__description">
+          <p>Обращаем Ваше внимание на то, что информация, размещенная на сайте, носит исключительно информационно-рекламный характер, и не является офертой или публичной офертой.
+            <br>Указанные на сайте цены не являются окончательной ценой и могут быть в любое время изменены.</p>
+        </div>
+        <div class="c-fmeta__dev">
+          Разработка сайта - <a href="http://hcube.ru/" target="_blank">HCube</a>
+        </div>
+      </div>
+    </div>
+    <!-- /FOOTER -->
+
+    <div style="display: none">
+      <div id="cb_form">
+        Форма
+      </div>
+    </div>
+
+    </div>
+    <script src="javascripts/jquery.fancybox.pack.js"></script>
+    <script src="javascripts/jquery.sumoselect.min.js"></script>
+    <script src="javascripts/app.min.js"></script>
+</body>

@@ -1,0 +1,61 @@
+.c-features {
+	padding: 50px;
+
+	@media screen and (max-width: 1279px) {
+		padding: 50px 20px;
+	}
+	
+	&__row {
+		.clearfix();
+		margin-bottom: 15px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__col {
+		width: 25%;
+		float: left;
+
+		@media screen and (max-width: 767px) {
+			width: 100%;
+			float: none;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__item {
+		text-align: center;
+		padding: 0 15px;
+	}
+	
+	&__icon {
+		margin-bottom: 5px;
+	}
+
+	&__text {
+
+		&--main {
+			font-size: round(25/14em, 3);
+			line-height: round(28/25, 3);
+			font-family: @sec-font;
+			color: #f7000c;
+
+			@media screen and (max-width: 1280px) {
+				font-size: round(20/14em, 3);
+			}
+		}
+
+		&--sec {
+			font-size: round(18/14em, 3);
+			line-height: round(28/18, 3);
+			font-family: @sec-font;
+			color: #000;	
+
+			@media screen and (max-width: 1280px) {
+				font-size: round(16/14em, 3);
+			}
+		}
+	}
+}

@@ -29,4 +29,8 @@ router.get('/list', function(req, res, next) {
   res.render('list', { ctx: global.siteDB });
 });
 
+router.get('/lp', function(req, res, next) {
+  res.render('lp', { ctx: global.siteDB });
+});
+
 module.exports = router;

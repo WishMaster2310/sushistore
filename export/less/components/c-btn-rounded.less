@@ -1,0 +1,93 @@
+.c-btn-rounded {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px 50px;
+	border: 0;
+	border-radius: 50px;
+	outline: none;
+	font-size: round(17/14em, 3);
+	line-height: round(20/17, 3);
+	font-style: italic;
+	text-decoration: none;
+	cursor: pointer;
+
+	&--cont {
+		background-color: #5f5f61;
+		color: #fff;
+
+		&:hover {
+			background-color: darken(#5f5f61, 10%);
+		}
+	}
+
+	&--pres {
+		background-color: #efefef;
+		color: #0c0b10;
+
+		&:hover {
+			background-color: darken(#efefef, 10%);
+		}
+	}
+
+	&--req {
+		background-color: #ff0b24;
+		color: #fff;
+
+		&:hover {
+			background-color: darken(#ff0b24, 10%);
+		}	
+	}
+
+	&--form {
+		background-color: #000;
+		color: #fff;
+
+		&:hover {
+			background-color: darken(#000, 10%);
+		}
+	}
+
+	&--sm {
+		padding: 10px 30px;
+	}
+
+	&__wrapper {
+		padding-top: 20px;
+		margin-bottom: 15px;
+		.clearfix();
+
+		.c-btn-rounded {
+			margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@media screen and (max-width: 767px) {
+			.c-btn-rounded {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&__col {
+
+		&--left {
+			float: left;
+
+			@media screen and (max-width: 767px) {
+				float: none;
+			}
+		}
+
+		&--right {
+			float: right;
+
+			@media screen and (max-width: 767px) {
+				float: none;
+			}
+		}
+	}
+}
