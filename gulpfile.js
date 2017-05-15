@@ -45,7 +45,7 @@ gulp.task('less:prod', function() {
   return gulp.src('public/less/style.less')
     //.pipe(sourcemaps.init())
     .pipe(less({
-      plugins: [autoprefix, cleancss]
+      plugins: [autoprefix]
     }).on('error', function(err) {
       gutil.log(err);
       this.emit('end');
