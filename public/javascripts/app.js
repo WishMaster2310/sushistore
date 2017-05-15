@@ -139,4 +139,28 @@ $(function() {
 	        scrollTop: $(attrVal).offset().top
 	    }, 1000);
 	});
+
+	var enableScrollTop = false;
+	var scrollTopBtn = $('.c-scrolltop');
+
+	function scrollTopToggle () {
+		if($(this).scrollTop() > 600 && !enableScrollTop) {
+			enableScrollTop = true;
+			scrollTopBtn.stop(true).fadeIn(300);
+		}	else if($(this).scrollTop() < 600 && enableScrollTop) {
+			enableScrollTop = false;
+			scrollTopBtn.stop(true).fadeOut(300);
+		}
+	}
+
+	function scrollToTop (e)  {
+		e.preventDefault();
+		$('html, body').stop(true).animate({scrollTop: 0}, 400);
+	}
+	
+	if(scrollTopBtn.length > 0) {
+		$(document).on('scroll', scrollTopToggle);
+		$(scrollTopBtn).on('click', scrollToTop);
+	}
+	
 });
