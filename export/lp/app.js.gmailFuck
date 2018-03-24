@@ -162,43 +162,5 @@ $(function() {
 		$(document).on('scroll', scrollTopToggle);
 		$(scrollTopBtn).on('click', scrollToTop);
 	}
-
-
-	if($('.c-sellpoint__aside-scroll').length > 0) {
-		$('.c-sellpoint__aside-scroll').jScrollPane({verticalGutter: 0,verticalDragMaxHeight: 200 });
-	}
-
-	var thumbsSlider = $('.c-sellpoint__thumbs-slider');
-	var pointsSlider = $('.c-sellpoint__slider-inner');
-
-	pointsSlider.slick({
-		infinite: false,
-		arrows: false,
-		dots: true
-	});
-
-	pointsSlider.on('afterChange', function(e, slick, current) {
-		console.log("current: ", current);
-
-		$('.c-sellpoint__thumbs-slide')
-			.eq(current).addClass('is-active')
-			.siblings('.c-sellpoint__thumbs-slide').removeClass('is-active');
-	});
-
-	thumbsSlider.slick({
-		infinite: false,
-		arrows: false,
-		dots: true,
-		slidesToShow: 4,
-		slidesToScroll: 4,
-		asNavFor: pointsSlider
-	})
-
-	$('.c-sellpoint__thumbs-slide').on('click', function(){
-		pointsSlider.slick('goTo', $(this).index());
-	});
-
-	$('.c-sellpoint__thumbs-slide').eq(0).addClass('is-active')
-
 	
 });
