@@ -1,0 +1,195 @@
+{%- set data = [
+  {
+    "id": "1098",
+    "title": "9-я Парковая улица, д.32",
+    "image": "http://via.placeholder.com/150x150",
+    "content": "Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong>",
+    "tel": "84952300000",
+    "subway": "Метро Первомайская"
+  },
+  {
+    "id": "4427",
+    "title": "г. Мытищи, ТЦ Красный Кит",
+    "content": "Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong>",
+    "tel": "84952300000"
+  },
+  {
+    "id": "4329",
+    "title": "г. Мытищи, ТЦ Экобазар, ул. Бульвар Ветеранов, д. 2,",
+    "content": "Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong>",
+    "tel": "84952300000"
+  },
+  {
+    "id": "4431",
+    "title": "Карусель, Симферопольское ш., 20А, стр.1",
+    "content": "Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong>",
+    "tel": "84952300000"
+  },
+  {
+    "id": "9558",
+    "title": "Шоссе Энтузиастов, 12 к. 2 ТЦ ГОРОД-2 Лефортово",
+    "subway": "Метро Первомайская",
+    "image": "http://via.placeholder.com/150x150",
+    "content": "Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong><br>Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong>",
+    "tel": "84952300000"
+  },
+  {
+    "id": "4421",
+    "title": "Бибирево",
+    "subway": "Метро Бибирево",
+    "image": "http://via.placeholder.com/150x150",
+    "content": "Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong>",
+    "tel": "84952300000"
+  },
+  {
+    "id": "4642",
+    "title": "ТЦ Вива, ул. Поляны, д.8",
+    "subway": "Метро Бр. Дмитрия Донского",
+    "content": "Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong>",
+    "tel": "84952300000"
+  },
+  {
+    "id": "1091",
+    "title": "Ивантеевская улица, д.32, кор. 2",
+    "subway": "Метро Бульвар Рокоссовского",
+    "content": "Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong>",
+    "tel": "84952300000"
+  },
+  {
+    "id": "4582",
+    "title": "ТВК Тишинка, Тишинская пл 1 стр 1",
+    "subway": "Метро Белорусская",
+    "content": "Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong>",
+    "tel": "84952300000"
+  },
+  {
+    "id": "4428",
+    "title": "ТЦ Парк хаус, Сигнальный проезд, 17",
+    "subway": "Метро Владыкино",
+    "content": "Пн. - Вс.&nbsp;<strong>с 10:00 до 23:00</strong>",
+    "tel": "84952300000"
+  }
+] -%}
+
+
+<div class="c-sellpoint-container">
+  <div class="c-sellpoint__aside">
+    <div class="c-sellpoint__aside-scroll">
+      {% for item in data %}
+        <div class="c-sellpoint-link" data-target="{{ item.id }}">
+          <div class="c-sellpoint-link__subway">{{ item.subway }}</div>
+          <div class="c-sellpoint-link__title">{{ item.title }}</div>
+          <div class="c-sellpoint-link__tel">тел.:&nbsp;{{ item.tel }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="c-sellpoint__content">
+    <div class="c-sellpoint__map">
+      <div class="c-sellpoint__map-inner" id="map"></div>
+    </div>
+  </div>
+</div>
+<div style="display: none">
+  {% for item in data %}
+    <div id="tooltip-{{ item.id }}">
+      <div class="c-sellpoint-info">
+        <div class="c-sellpoint-info__title">{{ item.title }}</div>
+        {% if item.subway %}
+          <div class="c-sellpoint-info__subway">{{ item.subway }}</div>
+        {% endif %}
+        <div class="c-sellpoint-info__row">
+          <div class="c-sellpoint-info__col">
+            <div class="c-sellpoint-info__content">{{ item.content | safe  }}</div>
+            <div class="c-sellpoint-info__tel">Тел.: <a href="tel:{{ item.tel }}">{{ item.tel }}</a></div>
+            <a href="#" class="c-sellpoint-info__btn">Подробнее</a>
+          </div>
+          <div class="c-sellpoint-info__col">
+            <a href="{{ item.image }}" class="c-sellpoint-info__image fbox">
+              <img src="{{ item.image }}">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+  var markersB={"17261":{"coords":[55.85852670705, 37.395143508911 ] }, "4427":{"coords":[55.916517946776, 37.75915145874 ] }, "4329":{"coords":[55.909085855711, 37.720077037811 ] }, "4431":{"coords":[55.485170225152, 37.564519643784 ] }, "9558":{"coords":[55.747489744233, 37.706558704376 ] }, "14869":{"coords":[55.708506021695, 37.65977025032 ] }, "4460":{"coords":[55.689941476153, 37.579196691513 ] }, "4426":{"coords":[55.689572574811, 37.602564096451 ] }, "4429":{"coords":[55.909879642121, 37.540208101273 ] }, "4430":{"coords":[55.790418882482, 37.531174421311 ] }, "1089":{"coords":[55.867633057105, 37.662544727391 ] }, "1090":{"coords":[55.871669271866, 37.684319973123 ] }, "4582":{"coords":[55.769159387228, 37.58326292038 ] }, "4421":{"coords":[55.886973579224, 37.602716448018 ] }, "4642":{"coords":[55.565448824611, 37.556269168854 ] }, "1091":{"coords":[55.814904054685, 37.731005430287 ] }, "4428":{"coords":[55.850640840356, 37.597913146019 ] }, "5544":{"coords":[55.837650814277, 37.537255525458 ] }, "3678":{"coords":[55.721188862439, 37.815782686505 ] }, "11738":{"coords":[55.795693495494, 37.560136914253 ] }, "1093":{"coords":[55.609959782765, 37.722375154626 ] }, "16635":{"coords":[55.685714021052, 37.854423522949 ] }, "4425":{"coords":[55.675757435857, 37.661969661713 ] }, "4422":{"coords":[55.631072846425, 37.515048980713 ] }, "12647":{"coords":[55.766301579326, 37.381281852722 ] }, "4420":{"coords":[55.704059919312, 37.765948176384 ] }, "9255":{"coords":[55.717496422978, 37.413869619631 ] }, "1096":{"coords":[55.676335180627, 37.770036935872 ] }, "1095":{"coords":[55.648981255263, 37.742184877461 ] }, "4447":{"coords":[55.846274170101, 37.357785701752 ] }, "4489":{"coords":[55.752628280225, 37.81924366951 ] }, "4448":{"coords":[55.670227593554, 37.5523853302 ] }, "1092":{"coords":[55.797336953922, 37.486827850407 ] }, "13431":{"coords":[55.86445134536, 37.606823444366 ] }, "4424":{"coords":[55.863491061383, 37.602488994598 ] }, "1098":{"coords":[55.795609059059, 37.800088405675 ] }, "4449":{"coords":[55.752018454124, 37.783344984055 ] }, "4827":{"coords":[55.692039914294, 37.72740483284 ] }, "4506":{"coords":[55.697451792525, 37.500296831131 ] }, "4927":{"coords":[55.61198979653, 37.608046531677 ] }, "4619":{"coords":[55.875578672776, 37.331746816635 ] }, "12452":{"coords":[55.8534, 37.351635 ] }, "5177":{"coords":[55.9996288812, 37.251583090983 ] }, "4494":{"coords":[55.744319334498, 37.679296731949 ] }, "4996":{"coords":[55.718130961362, 37.784168958533 ] }, "4499":{"coords":[55.730155025576, 37.729926109314 ] }, "4384":{"coords":[55.709724002251, 37.744079589975 ] }, "1088":{"coords":[55.824755887173, 37.434574127328 ] }, "13116":{"coords":[""] }, "8211":{"coords":[55.547529550683, 37.554756402969 ] }, "1094":{"coords":[55.725841289736, 37.58421349532 ] }, "4828":{"coords":[55.62518535347, 37.760456084943 ] }, "6588":{"coords":[55.629970523069, 37.423918247223 ] }, "4423":{"coords":[55.603693346165, 37.522784471512 ] } };
+</script>
+
+<script>
+  $(function() {
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [55.751574, 37.573856],
+              zoom: 10,
+              behaviors: ['default', 'scrollZoom']
+          }, {
+              searchControlProvider: 'yandex#search',
+              minZoom: 10
+          }),
+          
+          clusterer = new ymaps.Clusterer({
+              preset: 'islands#invertedRedClusterIcons',
+              groupByCoordinates: false,
+              clusterDisableClickZoom: true,
+              clusterHideIconOnBalloonOpen: false,
+              geoObjectHideIconOnBalloonOpen: false
+          }),
+          
+          getPointData = function (index) {
+            var node = $('#tooltip-' + index + '');
+            var result = {};
+            if(node.length > 0) {
+              result.balloonContentBody = $('#tooltip-' + index + '').html();
+              result.id = index;
+            }
+            return result
+          },
+
+          getPointOptions = function (d) {
+            return {
+              properties: {
+               id: d
+              }
+            }
+          },
+
+          collection = new ymaps.GeoObjectCollection(null, {
+            iconLayout: 'default#image',
+            iconImageHref: '../images/map-plaemark.png',
+            iconImageSize: [50, 48],
+            iconImageOffset: [-25, -48],
+          });
+
+      for (var i in markersB) {
+        if(markersB[i].coords.length > 1) {
+          collection.add(new ymaps.Placemark(markersB[i].coords, getPointData(i), getPointOptions(i)));
+        }
+      }
+
+      myMap.geoObjects.add(collection);
+
+      function linkHandler (e) {
+        e.preventDefault();
+        var id = $(this).attr('data-target');
+        var currentMark = null;
+
+        $(this).addClass('is-active').siblings().removeClass('is-active');
+        collection.each(function (geoObject) {
+          if (geoObject.properties.get('id') === id) {
+            myMap.panTo(markersB[id].coords, {flying: false}).then(function() {
+              geoObject.balloon.open();
+            })
+            return false;
+          }
+        });
+      }
+
+      $('.c-sellpoint-link').on('click', linkHandler);
+    });
+  })
+</script>

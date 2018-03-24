@@ -1,0 +1,133 @@
+{% set slider = [
+  {
+    "big": "sushi-store-sushi-store-5-a6768.jpg",
+    "small": "sushi-store-sushi-store-5-a6768.jpg"
+  },
+  {
+    "big": "185d0ae76a56a08b97bc095e82d244d4.jpg",
+    "small": "185d0ae76a56a08b97bc095e82d244d4.jpg"
+  },
+  {
+    "big": "ebb384ec8aa4ec8b9c-star-sushi-store-front.jpg",
+    "small": "ebb384ec8aa4ec8b9c-star-sushi-store-front.jpg"
+  },
+  {
+    "big": "images.jpg",
+    "small": "images.jpg"
+  }
+] %}
+{% extends "layout.html" %} 
+{% block content %}
+<ul class="c-bradcrumbs">
+  <li class="c-bradcrumbs__item">
+    <a href="/">Главная</a>
+  </li>
+  <li class="c-bradcrumbs__item">
+    <a href="/">Адреса суши баров</a>
+  </li>
+  <li class="c-bradcrumbs__item">
+    <span>9-я Парковая улица, д.32</span>
+  </li>
+</ul>
+<h1 class="c-title">9-я Парковая улица, д.32</h1>
+<div class="c-sellpoint-container">
+  <div class="c-sellpoint__aside c-sellpoint__aside--lg">
+    <div class="c-sellpoint__aside-scroll">
+      <div class="c-sellpoint__aside-inner">
+        <div class="c-sellpoint-link__subway">Метро Первомайская</div>
+        <a class="c-sellpoint__tel" href="tel:+73433706968">+7 (343) 370-69-68</a>
+        
+        <div class="c-sellpoint__label">Время работы:</div>
+        <table class="c-sellpoint__schedule">
+          <tr>
+            <td>Пн.</td>
+            <td>11:00 – 00:00</td>
+          </tr>
+          <tr>
+            <td>Вт.</td>
+            <td>11:00 – 00:00</td>
+          </tr>
+          <tr>
+            <td>Ср.</td>
+            <td>11:00 – 00:00</td>
+          </tr>
+          <tr>
+            <td>Пт.</td>
+            <td>11:00 – 00:00</td>
+          </tr>
+          <tr>
+            <td>Сб.</td>
+            <td>11:00 – 00:00</td>
+          </tr>
+          <tr>
+            <td>Вс.</td>
+            <td>Выходной</td>
+          </tr>
+        </table>
+
+        <ul class="c-sellpoint-opts">
+          <li>
+            Кредитные карты: <span class="c-sellpoint-opts__cards">
+              <img alt="VISA" src="../images/visa.jpg"><img alt="Maestro" src="../images/maestro.jpg"><img alt="Mastercard" src="../images/mastercard.jpg"><img alt="American express" src="../images/aexpress.jpg">
+            </span>
+          </li>
+          <li class="c-sellpoint-opts__item">
+            Посадочных мест: <span class="c-sellpoint-opts__value">122</span> 
+          </li>
+          <li class="c-sellpoint-opts__item">
+            Парковка: <span class="c-sellpoint-opts__value">Есть</span> 
+          </li>
+          <li class="c-sellpoint-opts__item">
+            Wi-fi: <span class="c-sellpoint-opts__value">Free</span> 
+          </li>
+          <li class="c-sellpoint-opts__item">
+            Кальянная карта: <span class="c-sellpoint-opts__value">Есть</span> 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="c-sellpoint__content">
+    <div class="c-sellpoint__slider">
+      <div class="c-sellpoint__slider-inner">
+        {% for item in slider %}
+          <div class="c-sellpoint__slide" style="background-image: url(../images/{{ item.big }})"></div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="c-sellpoint__thumbs">
+      <div class="c-sellpoint__thumbs-inner">
+        <div class="c-sellpoint__thumbs-slider">
+          {% for item in slider %}
+            <div class="c-sellpoint__thumbs-slide" style="background-image: url(../images/{{ item.big }})"></div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display: none">
+  {% for item in data %}
+    <div id="tooltip-{{ item.id }}">
+      <div class="c-sellpoint-info">
+        <div class="c-sellpoint-info__title">{{ item.title }}</div>
+        {% if item.subway %}
+          <div class="c-sellpoint-info__subway">{{ item.subway }}</div>
+        {% endif %}
+        <div class="c-sellpoint-info__row">
+          <div class="c-sellpoint-info__col">
+            <div class="c-sellpoint-info__content">{{ item.content | safe  }}</div>
+            <div class="c-sellpoint-info__tel">Тел.: <a href="tel:{{ item.tel }}">{{ item.tel }}</a></div>
+            <a href="#" class="c-sellpoint-info__btn">Подробнее</a>
+          </div>
+          <div class="c-sellpoint-info__col">
+            <a href="{{ item.image }}" class="c-sellpoint-info__image fbox">
+              <img src="{{ item.image }}">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

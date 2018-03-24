@@ -33,4 +33,12 @@ router.get('/lp', function(req, res, next) {
   res.render('lp', { ctx: global.siteDB });
 });
 
+router.get('/addresses', function(req, res, next) {
+  res.render('addresses', { ctx: global.siteDB });
+});
+
+router.get('/address', function(req, res, next) {
+  res.render('address', { ctx: global.siteDB });
+});
+
 module.exports = router;
