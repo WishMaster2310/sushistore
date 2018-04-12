@@ -3401,6 +3401,66 @@ input:checked + .c-checkbox__frame:after {
 .c-sellpoint__slider-inner .slick-track {
   height: 100%;
 }
+.c-sellpoint__slider-arrow {
+  position: absolute;
+  width: 100px;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.c-sellpoint__slider-arrow span {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.c-sellpoint__slider-arrow span:before {
+  width: 20px;
+  height: 20px;
+  border: 4px solid #fff;
+  position: absolute;
+  -webkit-transform: rotateZ(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotateZ(45deg);
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  content: "";
+}
+.c-sellpoint__slider-arrow--prev {
+  left: 0;
+}
+.c-sellpoint__slider-arrow--prev span:before {
+  border-top: 0px solid transparent;
+  border-right: 0px solid transparent;
+  margin-left: -6px;
+}
+.c-sellpoint__slider-arrow--next {
+  right: 0;
+}
+.c-sellpoint__slider-arrow--next span:before {
+  border-bottom: 0px solid transparent;
+  border-left: 0px solid transparent;
+  margin-left: -14px;
+}
+.c-sellpoint__slider-arrow:hover span {
+  background-color: #e31c2e;
+}
+.c-sellpoint__slider-arrow:active span {
+  -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
+}
 .c-sellpoint__slider .slick-dots {
   position: absolute;
   bottom: 20px;
@@ -3416,8 +3476,13 @@ input:checked + .c-checkbox__frame:after {
   background-color: #fff;
   border-radius: 50%;
   margin: 0 3px;
+  border: 2px solid #e31c2e;
   -webkit-transition: border-color 0.3s, background-color 0.3s;
   transition: border-color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+.c-sellpoint__slider .slick-dots li:hover {
+  background-color: #e31c2e;
 }
 .c-sellpoint__slider .slick-dots li.slick-active {
   background-color: #000;

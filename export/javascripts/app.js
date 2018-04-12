@@ -173,8 +173,17 @@ $(function() {
 
 	pointsSlider.slick({
 		infinite: false,
-		arrows: false,
-		dots: true
+		dots: true,
+		prevArrow: "<div class='c-sellpoint__slider-arrow c-sellpoint__slider-arrow--prev'><span></span><div>",
+		nextArrow: "<div class='c-sellpoint__slider-arrow c-sellpoint__slider-arrow--next'><span></span><div>",
+		responsive: [
+			{
+				breakpoint: 758,
+				settings: {
+					arrows: false
+				}
+			}
+		]
 	});
 
 	pointsSlider.on('afterChange', function(e, slick, current) {
