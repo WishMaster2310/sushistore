@@ -177,13 +177,21 @@
         e.preventDefault();
         var id = $(this).attr('data-target');
         var currentMark = null;
+        var isMobile = $(window).outerWidth() < 769
 
         $(this).addClass('is-active').siblings().removeClass('is-active');
         collection.each(function (geoObject) {
           if (geoObject.properties.get('id') === id) {
             myMap.panTo(markersB[id].coords, {flying: false}).then(function() {
               geoObject.balloon.open();
-            })
+            });
+            if(isMobile) {
+              var top = $('.c-sellpoint__content').offset().top;
+              
+              $('html, body').stop(true, true).animate({
+                scrollTop: top
+              }, 300)
+            }
             return false;
           }
         });
